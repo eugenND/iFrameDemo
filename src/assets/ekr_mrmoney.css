@@ -93,7 +93,8 @@ div#optionCompareOut {border: none !important;display: block !important;}
   visibility: hidden;
 } */
 
-.header_line > .cell.sp1_6.header {
+/* .header_line > .cell.sp1_6.header {
+  text-indent: -9999px;
   visibility: hidden;
   position: relative;
 }
@@ -104,7 +105,7 @@ div#optionCompareOut {border: none !important;display: block !important;}
   top: 0;
   left: 0;
   content: "This text replaces the original.";
-}
+} */
 
 /* Pedelec Infobox */
 .hrInfoBox {
