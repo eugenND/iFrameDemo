@@ -82,10 +82,23 @@ div#optionCompareOut {border: none !important;display: block !important;}
 .eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
 .eingabeBox.haftpflicht > .line.header_line:after {content: "Privathaftpflichtversicherung"}
 .eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"}
-.eingabeBox.gradient.hausrat > .line.header_line:after {content: "!!!!!Hausratversicherung"}
+/*.eingabeBox.gradient.hausrat > .line.header_line:after {content: "!!!!!Hausratversicherung"}*/
 .eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
 .eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
+
+.eingabeBox.gradient.hausrat > .cell.sp1_6.header {
+  visibility: hidden;
+}
+.eingabeBox.gradient.hausrat > .cell.sp1_6.header::after {
+  content:'goodbye'; 
+  visibility: visible;
+  display: block;
+  position: absolute;
+  background-color: red;
+  padding: 5px;
+  top: 2px;
+}
 
 /* Pedelec Infobox */
 .hrInfoBox {
