@@ -78,7 +78,7 @@ div#optionCompareHead {background-color: unset !important;color: #4a6985;font-si
 div#optionCompareOut {border: none !important;display: block !important;}
 
 /* .header_line > .cell.sp1_6.header { color: transparent !important } */
-.header_line > .cell.sp1_6.header { visibility: hidden; }
+/* .header_line > .cell.sp1_6.header { visibility: hidden; } */
 
 .eingabeBox > .line.header_line:after { color: #fff;text-align: center;position: absolute;width: 100%;top: 12px;font-size: 22px;}
 .eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
@@ -93,12 +93,17 @@ div#optionCompareOut {border: none !important;display: block !important;}
   visibility: hidden;
 } */
 
-.eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after {
-  content: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA';
+.header_line > .cell.sp1_6.header {
+  visibility: hidden;
+  position: relative;
+}
+
+.header_line > .cell.sp1_6.header:after {
   visibility: visible;
-  /* display: block; */
   position: absolute;
-  /* background-color: red; */
+  top: 0;
+  left: 0;
+  content: "This text replaces the original.";
 }
 
 /* Pedelec Infobox */
