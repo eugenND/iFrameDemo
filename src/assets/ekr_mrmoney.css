@@ -89,6 +89,16 @@ div#optionCompareOut {border: none !important;display: block !important;}
 .eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
 
+
+.eingabeBox.gradient.hausrat > .line.header_line { color: transparent !important; }
+
+.eingabeBox.gradient.hausrat > .line.header_line:after {
+        content: "New Text To Replace Old";
+        color: black; /* set color to original text color */
+        margin-left: -30px;
+        /* margin-left equals length of text we're replacing */
+}
+
 /* .eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header {
   visibility: hidden;
 } */
