@@ -97,6 +97,37 @@ div#optionCompareOut {border: none !important;display: block !important;}
   font-size: inherit;
 }
 
+.eingabeBox.unfall > .line.header_line > .cell.sp1_6.header:after{
+  content: "Unfallversicherung";
+  font-size: inherit;
+}
+
+.eingabeBox.haftpflicht > .line.header_line > .cell.sp1_6.header:after{
+  content: "Privathaftpflichtversicherung";
+  font-size: inherit;
+}
+
+.eingabeBox.tierhalter > .line.header_line > .cell.sp1_6.header:after{
+  content: "Tierhalterhaftpflichtversicherung";
+  font-size: inherit;
+}
+
+.eingabeBox.bike > .line.header_line > .cell.sp1_6.header:after{
+  content: "Fahrrad";
+  font-size: inherit;
+}
+
+.eingabeBox.rechtsschutz > .line.header_line > .cell.sp1_6.header:after{
+  content: "Rechtsschutzversicherung";
+  font-size: inherit;
+}
+
+.eingabeBox.wohngebaude > .line.header_line > .cell.sp1_6.header:after{
+  content: "Wohngeb.-Versicherung";
+  font-size: inherit;
+}
+
+
 /* Pedelec Infobox */
 .hrInfoBox {
   display: none;
