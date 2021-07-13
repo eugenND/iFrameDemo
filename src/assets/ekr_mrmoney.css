@@ -94,10 +94,7 @@ div#optionCompareOut {border: none !important;display: block !important;}
   content:'goodbye';
   visibility: visible;
   display: block;
-  position: absolute;
   background-color: red;
-  padding: 5px;
-  top: 2px;
 }
 
 /* Pedelec Infobox */
