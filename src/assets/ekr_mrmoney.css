@@ -90,13 +90,15 @@ div#optionCompareOut {border: none !important;display: block !important;}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
 
 .eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header {
+  /* color: transparent !important; */
   visibility: hidden;
 }
 
 .eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after {
-  content:'goodbye';
+  content: 'goodbye';
   visibility: visible;
   /* display: block; */
+  position: absolute;
   background-color: red;
 }
 
