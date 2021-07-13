@@ -87,10 +87,10 @@ div#optionCompareOut {border: none !important;display: block !important;}
 .eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
 
-.eingabeBox.gradient.hausrat > .cell.sp1_6.header {
+.eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header {
   visibility: hidden;
 }
-.eingabeBox.gradient.hausrat > .cell.sp1_6.header:after {
+.eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after {
   content:'goodbye';
   visibility: visible;
   display: block;
