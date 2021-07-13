@@ -78,7 +78,7 @@ div#optionCompareHead {background-color: unset !important;color: #4a6985;font-si
 div#optionCompareOut {border: none !important;display: block !important;}
 
 .header_line > .cell.sp1_6.header {
-   color: transparent !important;
+   /* color: transparent !important; */
    font-size: 0 !important;
 }
 /* .header_line > .cell.sp1_6.header { visibility: hidden; } */
@@ -93,7 +93,7 @@ div#optionCompareOut {border: none !important;display: block !important;}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
 
 .eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after{
-  content: "AAAAAAAAAAAAAAAAAAA";
+  content: "Hausratversicherung";
   font-size: inherit;
 }
 
