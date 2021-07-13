@@ -77,18 +77,18 @@ div#optionCompare {display: none !important;}
 div#optionCompareHead {background-color: unset !important;color: #4a6985;font-size: 22px !important;}
 div#optionCompareOut {border: none !important;display: block !important;}
 
+/* Alte Bezeichnung uber die font-size ueberschreiben wegen Fehlermeldung die von MM kommt */
 .header_line > .cell.sp1_6.header {
    /* color: transparent !important; */
    font-size: 0 !important;
 }
-/* .header_line > .cell.sp1_6.header { visibility: hidden; } */
 
 .eingabeBox > .line.header_line:after { color: #fff; text-align: center; position: absolute; width: 100%; top: 12px; font-size: 22px;}
 /* .eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
 .eingabeBox.haftpflicht > .line.header_line:after {content: "Privathaftpflichtversicherung"}
-.eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"} */
-/*.eingabeBox.gradient.hausrat > .line.header_line:after {content: "=>Hausratversicherung"}*/
-/* .eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
+.eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"}
+.eingabeBox.gradient.hausrat > .line.header_line:after {content: "=>Hausratversicherung"}
+.eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
 .eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
 .eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"} */
 
@@ -96,32 +96,26 @@ div#optionCompareOut {border: none !important;display: block !important;}
   content: "Hausratversicherung";
   font-size: 22px;
 }
-
 .eingabeBox.unfall > .line.header_line > .cell.sp1_6.header:after{
   content: "Unfallversicherung";
   font-size: 22px;
 }
-
 .eingabeBox.haftpflicht > .line.header_line > .cell.sp1_6.header:after{
   content: "Privathaftpflichtversicherung";
   font-size: 22px;
 }
-
 .eingabeBox.tierhalter > .line.header_line > .cell.sp1_6.header:after{
   content: "Tierhalterhaftpflichtversicherung";
   font-size: 22px;
 }
-
 .eingabeBox.bike > .line.header_line > .cell.sp1_6.header:after{
   content: "Fahrrad";
   font-size: 22px;
 }
-
 .eingabeBox.rechtsschutz > .line.header_line > .cell.sp1_6.header:after{
   content: "Rechtsschutzversicherung";
   font-size: 22px;
 }
-
 .eingabeBox.wohngebaude > .line.header_line > .cell.sp1_6.header:after{
   content: "Wohngeb.-Versicherung";
   font-size: 22px;
