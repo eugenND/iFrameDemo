@@ -84,13 +84,13 @@ div#optionCompareOut {border: none !important;display: block !important;}
 /* .header_line > .cell.sp1_6.header { visibility: hidden; } */
 
 .eingabeBox > .line.header_line:after { color: #fff;text-align: center;position: absolute;width: 100%;top: 12px;font-size: 22px;}
-.eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
+/* .eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
 .eingabeBox.haftpflicht > .line.header_line:after {content: "Privathaftpflichtversicherung"}
-.eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"}
+.eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"} */
 /*.eingabeBox.gradient.hausrat > .line.header_line:after {content: "=>Hausratversicherung"}*/
-.eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
+/* .eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
 .eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
-.eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"}
+.eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"} */
 
 .eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after{
   content: "Hausratversicherung";
