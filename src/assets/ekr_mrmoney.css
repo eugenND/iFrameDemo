@@ -79,8 +79,8 @@ div#optionCompareOut {border: none !important;display: block !important;}
 
 /* Alte Bezeichnung uber die font-size ueberschreiben wegen Fehlermeldung die von MM kommt */
 .header_line > .cell.sp1_6.header {
-   /* color: transparent !important; */
    font-size: 0 !important;
+   /* color: transparent !important; */
 }
 
 .eingabeBox > .line.header_line:after { color: #fff; text-align: center; position: absolute; width: 100%; top: 12px; font-size: 22px;}
