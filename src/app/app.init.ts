@@ -13,5 +13,6 @@ export function initializeKeycloak(keycloak: KeycloakService): () => Promise<boo
         silentCheckSsoRedirectUri:
           window.location.origin + '/assets/silent-check-sso.html',
       },
+      loadUserProfileAtStartUp: true
     });
 }
