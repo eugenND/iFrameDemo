@@ -14,8 +14,8 @@ input#fahrrad, input#wohnfl{width: 80% !important;}
 input#btn_w_part_1 {width: 100%;}
 .formAlertBox {border:none !important; background-color:transparent !important; color:red !important; font-weight:normal !important; padding:0 !important;border-radius:unset !important; margin:0 !important; font-size:14px !important;}
 input[type="button"], input[type="submit"] {
-  background: #666 !important;
-  border-color: #666 !important;
+  background: #ff9900 !important;
+  border-color: #ff9900 !important;
   border-radius: 2px !important;
   color: #fff !important;
   box-shadow: none;
@@ -683,7 +683,7 @@ a.filter_email:after{content: "Ergebnis per E-Mail schicken"}
 #vvergleich #box_faq table ul li {margin:10px 0 10px 0!important; line-height:14px!important; }
 
 #vvergleich a {color:#0078d7;text-decoration:underline;font-size:16px;}
-#vvergleich a:active {color:#666;}
+#vvergleich a:active {color:#ff9900;}
 #vvergleich a:hover, #vvergleich a:active, #vvergleich a:visited, #vvergleich a:focus  {background-color:inherit;}
 #vvergleich a.infofeld {position: relative; z-index:50;}
 
@@ -698,7 +698,7 @@ a.filter_email:after{content: "Ergebnis per E-Mail schicken"}
 table.table-leistungv2.ergebnisse tr td div.inner_text {overflow-y: hidden !important;}
 
 img.lvg_zoom_info.lvg_zoom_info_in, img.lvg_zoom_info.lvg_zoom_info_out{display: none}
-.caption.caption_mediation.lineMrMoneyn > td > div {color: #666; text-decoration: underline;font-size: 14px;font-weight: normal}
+.caption.caption_mediation.lineMrMoneyn > td > div {color: #0075AC; text-decoration: underline;font-size: 14px;font-weight: normal}
 .caption.caption_mediation.lineMrMoneyn > td > div:before{font-family: FontAwesome;content: "\f05a"}
 .capDOKS.lineMrMoney td a{font-size:11px !important;}
 a.aLvgSuche {text-decoration: none !important;}
@@ -743,7 +743,7 @@ input#email_angebot { width: 240px; }
   background: linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 );
   font-size: 13px;color: #3b3b3a;font-weight:bold;padding: 1px 6px;margin:0 0 10px 0;line-height: 18px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.5);border: 1px solid rgba(0,0,0,0.25);cursor: pointer}
-*+html #vvergleich input.form-button {border:1px solid #666666;}
+*+html #vvergleich input.form-button {border:1px solid #ff9900;}
 #vvergleich input.form-button.clicked { box-shadow: none; }
 #vvergleich input.form-button:hover {background-color:#ffee91;}
 #vvergleich input.form-button:active {background-color:#FFCC66;}
@@ -758,7 +758,7 @@ input#email_angebot { width: 240px; }
   background: linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 );
   font-size: 13px;color: #3b3b3a;font-weight:bold;padding: 1px 6px;margin:0;line-height: 18px;border-radius: 5px;box-shadow: 0 1px 3px rgba(0,0,0,0.5);border: 1px solid rgba(0,0,0,0.25);cursor: pointer;}
-*+html #vvergleich .vergleichbutton {border:1px solid #666666;}
+*+html #vvergleich .vergleichbutton {border:1px solid #ff9900;}
 #vvergleich .vergleichbutton.clicked { box-shadow: none; }
 #vvergleich .vergleichbutton:hover {background-color:#ffee91;}
 #vvergleich .vergleichbutton:active {background-color:#FFCC66;}
@@ -786,7 +786,7 @@ input#email_angebot { width: 240px; }
 #vvergleich .eingabeBox .line .cell{float:left;vertical-align: middle; font-size:22px; margin:1px 0 2px 0;min-height: 21px;line-height: 28px; padding:4px 3px 0 3px;}
 #tr_rabattangaben > div.cell.sp1_6 > center > strong > strong {font-weight: 400; color: #3b3b3a;}
 #vvergleich .eingabeBox .line label { font-size:16px }
-#vvergleich .eingabeBox .cell.sp1 {width:46% !important;height:auto;margin-right:10px; margin-left:20px; text-align:right; font-size:16px; font-weight:normal; color:#666}
+#vvergleich .eingabeBox .cell.sp1 {width:46% !important;height:auto;margin-right:10px; margin-left:20px; text-align:right; font-size:16px; font-weight:normal; color:#ff9900}
 #vvergleich .eingabeBox .cell.sp2 {width:44% !important;text-align:left;margin-left:10px}
 #vvergleich .eingabeBox .cell.sp3 {width:24px;text-align:center; float:left}
 #vvergleich .eingabeBox .cell.sp1_6 {width:100%;}
@@ -860,13 +860,13 @@ table#tbl_vorgaben { width:100%;margin:0 auto; }
 
 a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
 
-#vvergleich .ergebnisBox.reise .normal_header {background-color:#eee;font-weight:bold;color:#666;font-size:12px;padding:3px 3px 3px 20px; text-align:left}
+#vvergleich .ergebnisBox.reise .normal_header {background-color:#eee;font-weight:bold;color:#ff9900;font-size:12px;padding:3px 3px 3px 20px; text-align:left}
 /*#vvergleich .ergebnisBox .line .cell.sp1 {width: 110px;text-align: center;height:90px;position:relative;display:table; white-space:normal;}*/
 #vvergleich .ergebnisBox .line .cell.sp1 a {text-decoration:none;font-size:12px;cursor:help;}
 /*#vvergleich .ergebnisBox .line .cell.sp1 .label {text-decoration:underline;white-space:normal;width:110px;display:inline-block;}*/
 /*#vvergleich .ergebnisBox .line .cell.sp1 img {margin-bottom:5px;border:0;cursor:help;}*/
 #vvergleich .ergebnisBox .line .cell.sp1 .bewertung img {cursor:pointer;}
-#vvergleich .nicht_bewertet {font-size:9px; color:#666; font-style:italic}
+#vvergleich .nicht_bewertet {font-size:9px; color:#0075AC; font-style:italic}
 
 .setting{display: flex}
 .setting_left,.setting_right{flex-basis: 0; flex-grow: 1}
@@ -881,7 +881,7 @@ a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
 
 /*#vvergleich .ergebnisBox .cell.sp4{width:106px;text-align:left; position:relative;}*/
 /*#vvergleich .ergebnisBox .cell.sp5{width:90px; padding-top:0}*/
-#vvergleich .ergebnisBox .cell.sp5 .zahlweise{font-size:12px; margin-top:4px; margin-bottom:8px; color:#666}
+#vvergleich .ergebnisBox .cell.sp5 .zahlweise{font-size:12px; margin-top:4px; margin-bottom:8px; color:#0075AC}
 /*#vvergleich .ergebnisBox .cell.sp6{width:16px;text-align:right; margin:0; position:absolute; top:10px; right:8px}*/
 #vvergleich .ergebnisBox .position {display:block; margin-left:2px; margin-bottom:1px; text-align:left; font-weight:normal; font-size:9px; color:#333;}
 #vvergleich .ergebnisBox a.tarifinfo {font-weight:bold; text-decoration:underline!important }
@@ -1010,13 +1010,13 @@ div#optionMrmo, span.balken, span.punkte {
 #vvergleich input.empfehlung {	float:left; margin:5px 0 0 10px;}
 #vvergleich input.wissenswertes { float:left; margin:5px 0 0 0;}
 
-#vvergleich .cell.sp4 .punkte {margin-top:3px;display:block;text-align:center;width:90px;font-size:16px;color:#666;}
+#vvergleich .cell.sp4 .punkte {margin-top:3px;display:block;text-align:center;width:90px;font-size:16px;color:#0075AC;}
 #vvergleich .cell.sp4 .punkte .prozentwert {font-weight:bold;}
 #vvergleich .cell .betrag {font-weight:bold;font-size:18px;margin:0 0 0 0;display:block;}
 #vvergleich .ergebnisBox .cell a.antrag {
   font-size: 12px;
-  background: #666;
-  border-bottom-color: #666;
+  background: #0075AC;
+  border-bottom-color: #ff9900;
   color: #fff;
   text-decoration: none;
   display: inline-block;
@@ -1119,11 +1119,11 @@ div#optionMrmo, span.balken, span.punkte {
 *+html #tiptip_content { border:1px solid #ccc; }
 /* eingabe end */
 
-#vvergleich .ui-state-default, #vvergleich .ui-widget-content .ui-state-default, #vvergleich .ui-widget-header .ui-state-default {   border: 1px solid #666; background: #4583E0; font-weight: bold; color: #2779aa; }
+#vvergleich .ui-state-default, #vvergleich .ui-widget-content .ui-state-default, #vvergleich .ui-widget-header .ui-state-default {   border: 1px solid #0075AC; background: #4583E0; font-weight: bold; color: #2779aa; }
 #vvergleich .ui-state-default a, #vvergleich .ui-state-default a:link, #vvergleich .ui-state-default a:visited { color: #2779aa; text-decoration: none; }
 #vvergleich .ui-state-hover, #vvergleich .ui-widget-content .ui-state-hover, #vvergleich .ui-widget-header .ui-state-hover, #vvergleich .ui-state-focus, #vvergleich .ui-widget-content .ui-state-focus, #vvergleich .ui-widget-header .ui-state-focus { border: 1px solid #0167cd; background: #385069; font-weight: bold; color: #0070a3; }
 #vvergleich .ui-state-hover a, #vvergleich .ui-state-hover a:hover { color: #385069; text-decoration: none; }
-#vvergleich .ui-state-active, #vvergleich .ui-widget-content .ui-state-active, #vvergleich .ui-widget-header .ui-state-active { border: 1px solid #666; background: #4583E0; font-weight: bold; color: #ffffff; }
+#vvergleich .ui-state-active, #vvergleich .ui-widget-content .ui-state-active, #vvergleich .ui-widget-header .ui-state-active { border: 1px solid #0075AC; background: #4583E0; font-weight: bold; color: #ffffff; }
 #vvergleich .ui-state-active a, #vvergleich .ui-state-active a:link, #vvergleich .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
 #vvergleich .ui-widget :active { outline: none; }
 
@@ -1219,7 +1219,7 @@ table#detailFragen .row-header td { font-size:12px; font-weight:bold; padding:10
 #vvergleich .table-berechnung a.infoicon {text-decoration:none;}
 
 div.auxmtbasicemnxczelas, div.auxmtbasicemnxczelas span, div.auxmtbasicemnxczelas li { background-color: #fff!important; }
-div.auxmtbasicemnxczelas li { margin-left:0!important; font-family: inherit, sans-serif;  font-size:12px!important; color: #666!important; border-top-color: #ccc!important; }
+div.auxmtbasicemnxczelas li { margin-left:0!important; font-family: inherit, sans-serif;  font-size:12px!important; color: #0075AC!important; border-top-color: #ccc!important; }
 div.auxmtbasicemnxczelas li.ac_over { color:#fff!important; background-color: #999!important }
 
 /* eingabe begin */
@@ -1275,7 +1275,7 @@ input[disabled], input:disabled {background-color: #E6E6E6 !important;color: #9D
 #vvergleich .schattiert{-moz-box-shadow:1px 4px 16px 3px #3b3b3a}
 #vvergleich .topMenuBox{white-space:nowrap; font:16px Arial,Helvetica,sans-serif; }
 #vvergleich .topMenuBox .MenuEntry{text-align:center;padding:2px 18px;margin-right:10px;cursor:default;display:inline-block;border-left:1px solid #ccf;border-top:1px solid #ccf;border-right:1px solid #ccf}
-#vvergleich .topMenuBox .MenuEntry.none{color:#666;background:#eee}
+#vvergleich .topMenuBox .MenuEntry.none{color:#0075AC;background:#eee}
 #vvergleich .topMenuBox .MenuEntry.aktiv{color:#fff;background:#2C74E0}
 #vvergleich .topMenuBox .MenuEntry.done{color:#3b3b3a;background:#BBE86C}
 #vvergleich .topMenuBox .MenuEntry.done:hover{cursor:pointer; color:#fff;background:#2C74E0}
@@ -1284,7 +1284,7 @@ input[disabled], input:disabled {background-color: #E6E6E6 !important;color: #9D
 #vvergleich .sp148{width:148px}
 #vvergleich .sp200{width:200px}
 #vvergleich .sp228{width:228px}
-#vvergleich input[readonly]{color:#666;background:#eee}
+#vvergleich input[readonly]{color:#ff9900;background:#eee}
 /* kfz rechner eingabe end */
 
 #vvergleich table .row-header { font-weight: bold; text-align: center; background-color: #4583E0; }
@@ -1493,11 +1493,11 @@ input#btn_back {width: 100%; height: 45px; margin-top: 10px;margin-bottom: 10px;
 span.head_sparte:before{content: "\00a0 "}
 .ant_box{border:none; background-color:#fff;box-shadow:none;padding: 0 10px;}
 .ant_box > div{border-bottom: 1px dotted #ddd;line-height: unset;}
-div.zeile .sp1{font-size:16px;font-weight:normal;color:#666}
-div.zeile .sp2{font-size:16px;font-weight:normal;color:#666}
+div.zeile .sp1{font-size:16px;font-weight:normal;color:#ff9900}
+div.zeile .sp2{font-size:16px;font-weight:normal;color:#ff9900}
 /*div.zeile .sp1:hover, div.zeile .sp2:hover, div.zeile .sp1:active, div.zeile .sp2:active{font-size:16px !important;font-weight:normal !important;color:#666 !important;}
 .ant_box > div:hover, .ant_box > div:active {font-size:16px !important;font-weight:normal !important;;color:#666 !important;background: #f3f3f3 !important;}*/
-div.zeile:hover .sp1{color:#666 !important;}
+div.zeile:hover .sp1{color:#ff9900 !important;}
 input[type=text], textarea, select{height:40px; font-size: 16px; color:#495057;border:1px solid #ced4da;background: #fff;padding: .4rem .75rem;border-radius:2px;line-height:1.5;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
 .ant_ue, .ant_ue_sepa,
 #zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben, #zeile_ges_fragen0,
@@ -1546,10 +1546,10 @@ div#zeile_bestaetigung_abschluss .sp1, div#zeile_bestaetigung_datenschutz .sp1, 
 div#zeile_bestaetigung_abschluss .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_elementarbogen .sp2, div#zeile_bestaetigung_gebaeudealter_bogen .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_scoring .sp2, div#zeile_bestaetigung_dmbRS1 .sp2, div#zeile_bestaetigung_dmbRS2 .sp2, div#zeile_bestaetigung_dmbRS3 .sp2, div#zeile_bestaetigung_opt1 .sp2, div#zeile_bestaetigung_bonitaet .sp2, div#zeile_bestaetigung_antragssteller_verzicht .sp2, div#zeile_einwilligung_t1 .sp2, div#zeile_einwilligung_t2 .sp2, div#zeile_bestaetigung_Maklerauftrag .sp2, div#zeile_cacheEingaben .sp2, div#zeile_bestaetigung_newsletter .sp2{margin-left: 20px}
 div.zeile.kaufen_bereich{background-color:#fff;border:none;border-radius:unset;}
 .kaufen_info_beitrag{font-size:22px;font-weight: normal;color:#dc3545}
-.antrag_auftrag{background: none !important;; background-color: #666 !important;}
+.antrag_auftrag{background: none !important;; background-color: #ff9900 !important;}
 #zeile_antrag_absenden{padding-left: 10px; padding-right: 10px;}
 .kaufen_info_ablauf, .maklereingeloggt{display: none !important;}
-.pb_button{height: 35px; background:#666 !important;padding:.375rem .75rem;border-radius:2px;font-weight:normal;color: #fff;box-shadow:none;text-shadow: none;border: 1px solid transparent;}
+.pb_button{height: 35px; background:#ff9900 !important;padding:.375rem .75rem;border-radius:2px;font-weight:normal;color: #fff;box-shadow:none;text-shadow: none;border: 1px solid transparent;}
 .pb_button:hover{background: #e5943a;}
 #kaufen_button{width: 100%; font-size: 20px; height: 50px;}
 input#cancelEmailTo{width:200px !important;}
@@ -1557,7 +1557,7 @@ input#cancelEmailTo{width:200px !important;}
 div#sepa_zustimmungErrorBox, div#datenschutzErrorBox, div#abschlussErrorBox {background-color: #f44336 !important;border: transparent !important;color: #fff !important;padding: 15px !important;font-weight: normal !important;font-size: 14px !important;border-radius: 2px;}
 .FormErrorBox {background-color: unset !important;border: none !important;color: #dc3545!important;font-weight: normal !important;font-size: 14px !important;padding-left: 0px !important;}
 .zeile.beratungsdok {color: #0167cd;}
-.zeile.beratungsdok .sp_colspan{color: #666; padding-left: 20px;}
+.zeile.beratungsdok .sp_colspan{color: #ff9900; padding-left: 20px;}
 .zeile.beratungsdok .sp_colspan p > br:nth-child(odd){content: " "}
 .zeile.beratungsdok .sp_colspan > p > strong {font-weight: 700;font-size: 14px;}
 div#zeile_tarife_empfohlen_dok .sp_colspan > textarea{width: 75% !important; margin-left:200px;}
@@ -1593,7 +1593,7 @@ div#antrag {
 }
 
 .pb_button{
-  background: #666 !important;
+  background: #ff9900 !important;
   border-radius: 2px !important;
   transition: all .3s linear;
 }
