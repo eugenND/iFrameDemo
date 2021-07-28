@@ -74,7 +74,7 @@ select[id=vermiet] option[value="6"], #btn-angebot-empty
 {display: none !important;}
 
 div#optionCompare {display: none !important;}
-div#optionCompareHead {background-color: unset !important;color: #0167cd;font-size: 22px !important;}
+div#optionCompareHead {background-color: unset !important;color: #0075AC;font-size: 22px !important;}
 div#optionCompareOut {border: none !important;display: block !important;}
 
 /* Alte Bezeichnung ueber die font-size unterdruecken, da sonst die Fehlermeldung von MM die Darstellung zerhaut */
@@ -682,8 +682,8 @@ a.filter_email:after{content: "Ergebnis per E-Mail schicken"}
 #vvergleich #box_faq table ul { font-size:16px!important; line-height:12px!important; }
 #vvergleich #box_faq table ul li {margin:10px 0 10px 0!important; line-height:14px!important; }
 
-#vvergleich a {color:#0078d7;text-decoration:underline;font-size:16px;}
-#vvergleich a:active {color:#ff9900;}
+#vvergleich a {color:#0075AC;text-decoration:underline;font-size:16px;}
+#vvergleich a:active {color:#269AD1;}
 #vvergleich a:hover, #vvergleich a:active, #vvergleich a:visited, #vvergleich a:focus  {background-color:inherit;}
 #vvergleich a.infofeld {position: relative; z-index:50;}
 
@@ -786,12 +786,12 @@ input#email_angebot { width: 240px; }
 #vvergleich .eingabeBox .line .cell{float:left;vertical-align: middle; font-size:22px; margin:1px 0 2px 0;min-height: 21px;line-height: 28px; padding:4px 3px 0 3px;}
 #tr_rabattangaben > div.cell.sp1_6 > center > strong > strong {font-weight: 400; color: #3b3b3a;}
 #vvergleich .eingabeBox .line label { font-size:16px }
-#vvergleich .eingabeBox .cell.sp1 {width:46% !important;height:auto;margin-right:10px; margin-left:20px; text-align:right; font-size:16px; font-weight:normal; color:#ff9900}
+#vvergleich .eingabeBox .cell.sp1 {width:46% !important;height:auto;margin-right:10px; margin-left:20px; text-align:right; font-size:16px; font-weight:normal; color:#575757}
 #vvergleich .eingabeBox .cell.sp2 {width:44% !important;text-align:left;margin-left:10px}
 #vvergleich .eingabeBox .cell.sp3 {width:24px;text-align:center; float:left}
 #vvergleich .eingabeBox .cell.sp1_6 {width:100%;}
 #vvergleich .eingabeBox .cell.header{
-  background-color: #0167cd;
+  background-color: #0075AC;
   height: 30px;
   color:#FFFFFF;text-align:center;margin:0}
 #vvergleich .eingabeBox .header2 {margin:0!important; background-color:#5faef6!important; color:#fff!important;}
@@ -836,7 +836,7 @@ table#tbl_vorgaben { width:100%;margin:0 auto; }
 #vvergleich table.info-bauklassen td { padding:4px; border:1px solid #ccc }
 
 #vvergleich a.infoicon {display:inline-block; background:none; background-repeat: no-repeat; background-position: top right; vertical-align:middle; cursor:help; padding-right:20px; height:20px; font-size:12px; text-decoration: none; }
-#vvergleich a.infoicon::before {font-family: FontAwesome; content: "\f29c"; color: #0167cd; font-size:22px}
+#vvergleich a.infoicon::before {font-family: FontAwesome; content: "\f29c"; color: #0075AC; font-size:22px}
 #vvergleich .eingabeBox a.infoicon {padding-right:0; background-position:top center; margin-top:0!important}
 #vvergleich a.quickinfo { text-decoration:none; border-bottom:1px dotted #3b3b3a; display:inline!important }
 #vvergleich .clear {clear:both;height:0; font-size:0 }
@@ -860,7 +860,7 @@ table#tbl_vorgaben { width:100%;margin:0 auto; }
 
 a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
 
-#vvergleich .ergebnisBox.reise .normal_header {background-color:#eee;font-weight:bold;color:#ff9900;font-size:12px;padding:3px 3px 3px 20px; text-align:left}
+#vvergleich .ergebnisBox.reise .normal_header {background-color:#eee;font-weight:bold;color:#575757;font-size:12px;padding:3px 3px 3px 20px; text-align:left}
 /*#vvergleich .ergebnisBox .line .cell.sp1 {width: 110px;text-align: center;height:90px;position:relative;display:table; white-space:normal;}*/
 #vvergleich .ergebnisBox .line .cell.sp1 a {text-decoration:none;font-size:12px;cursor:help;}
 /*#vvergleich .ergebnisBox .line .cell.sp1 .label {text-decoration:underline;white-space:normal;width:110px;display:inline-block;}*/
@@ -919,7 +919,7 @@ a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
 #vvergleich .ergebnisBox.ergebnisHeader .line .cell.sp1 { height: auto }
 #vvergleich .ergebnisBox.ergebnisHeader {
   display: none !important;
-  background-color: #0167cd;
+  background-color: #0075AC;
   border:0; padding:0; margin:5px 0 10px 0; }
 *+html #vvergleich .ergebnisBox.ergebnisHeader { border:1px solid #4583E0 }
 #vvergleich .ergebnisBox.ergebnisHeader a { color:#fff; text-decoration:none }
@@ -963,14 +963,14 @@ a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
 #vvergleich .cell.sp4 .sterne_kriterien dl.spalten dd {margin-left:270px;padding:3px 0; width: 75px;}
 
 #vvergleich .cell .balken .aktiv, #tarifinfo .cell .balken .aktiv {
-  background-color: #0167cd;
-  background: -moz-linear-gradient(top,  #0167cd 0%, #0167cd 50%, #0167cd 51%, #0167cd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0167cd), color-stop(50%,#0167cd), color-stop(51%,#0167cd), color-stop(100%,#0167cd));
-  background: -webkit-linear-gradient(top,  #0167cd 0%,#0167cd 50%,#0167cd 51%,#0167cd 100%);
-  background: -o-linear-gradient(top,  #0167cd 0%,#0167cd 50%,#0167cd 51%,#0167cd 100%);
-  background: -ms-linear-gradient(top,  #0167cd 0%,#0167cd 50%,#0167cd 51%,#0167cd 100%);
-  background: linear-gradient(top,  #0167cd 0%,#0167cd 50%,#0167cd 51%,#0167cd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0167cd', endColorstr='#0167cd',GradientType=0 );
+  background-color: #0075AC;
+  background: -moz-linear-gradient(top,  #0075AC 0%, #0075AC 50%, #0075AC 51%, #0075AC 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0075AC), color-stop(50%,#0075AC), color-stop(51%,#0075AC), color-stop(100%,#0075AC));
+  background: -webkit-linear-gradient(top,  #0075AC 0%,#0075AC 50%,#0075AC 51%,#0075AC 100%);
+  background: -o-linear-gradient(top,  #0075AC 0%,#0075AC 50%,#0075AC 51%,#0075AC 100%);
+  background: -ms-linear-gradient(top,  #0075AC 0%,#0075AC 50%,#0075AC 51%,#0075AC 100%);
+  background: linear-gradient(top,  #0075AC 0%,#0075AC 50%,#0075AC 51%,#0075AC 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0075AC', endColorstr='#0075AC',GradientType=0 );
 }
 #vvergleich .ergebnisBox .balken { margin-top:2px }
 
@@ -1040,10 +1040,10 @@ div#optionMrmo, span.balken, span.punkte {
 #vvergleich .resultFilter_legend {font-weight:bold;padding:3px 0px 8px 0px;font-size:12px}
 #vvergleich .resultFilter_legend a { text-decoration:none; vertical-align:middle;}
 
-#vvergleich .resultFilter_legend a.unten, #vvergleich .resultFilter_legend a.oben { font-size: 20px; color: #0167cd;}
+#vvergleich .resultFilter_legend a.unten, #vvergleich .resultFilter_legend a.oben { font-size: 20px; color: #0075AC;}
 
-#vvergleich .resultFilter_legend a.unten:before {font-family: FontAwesome; content: "\f139"; color: #0167cd; font-size: 20px; margin-right: 7px}
-#vvergleich .resultFilter_legend a.oben:before {font-family: FontAwesome; content: "\f13a"; color: #0167cd; font-size: 20px; margin-right: 7px}
+#vvergleich .resultFilter_legend a.unten:before {font-family: FontAwesome; content: "\f139"; color: #0075AC; font-size: 20px; margin-right: 7px}
+#vvergleich .resultFilter_legend a.oben:before {font-family: FontAwesome; content: "\f13a"; color: #0075AC; font-size: 20px; margin-right: 7px}
 
 #vvergleich .resultFilter .zahlweise,
 #vvergleich .resultFilter .beitrag,
@@ -1121,7 +1121,7 @@ div#optionMrmo, span.balken, span.punkte {
 
 #vvergleich .ui-state-default, #vvergleich .ui-widget-content .ui-state-default, #vvergleich .ui-widget-header .ui-state-default {   border: 1px solid #0075AC; background: #4583E0; font-weight: bold; color: #2779aa; }
 #vvergleich .ui-state-default a, #vvergleich .ui-state-default a:link, #vvergleich .ui-state-default a:visited { color: #2779aa; text-decoration: none; }
-#vvergleich .ui-state-hover, #vvergleich .ui-widget-content .ui-state-hover, #vvergleich .ui-widget-header .ui-state-hover, #vvergleich .ui-state-focus, #vvergleich .ui-widget-content .ui-state-focus, #vvergleich .ui-widget-header .ui-state-focus { border: 1px solid #0167cd; background: #385069; font-weight: bold; color: #0070a3; }
+#vvergleich .ui-state-hover, #vvergleich .ui-widget-content .ui-state-hover, #vvergleich .ui-widget-header .ui-state-hover, #vvergleich .ui-state-focus, #vvergleich .ui-widget-content .ui-state-focus, #vvergleich .ui-widget-header .ui-state-focus { border: 1px solid #0075AC; background: #385069; font-weight: bold; color: #0070a3; }
 #vvergleich .ui-state-hover a, #vvergleich .ui-state-hover a:hover { color: #385069; text-decoration: none; }
 #vvergleich .ui-state-active, #vvergleich .ui-widget-content .ui-state-active, #vvergleich .ui-widget-header .ui-state-active { border: 1px solid #0075AC; background: #4583E0; font-weight: bold; color: #ffffff; }
 #vvergleich .ui-state-active a, #vvergleich .ui-state-active a:link, #vvergleich .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
@@ -1142,13 +1142,13 @@ div#optionMrmo, span.balken, span.punkte {
 #vvergleich .ui-slider { position: relative; text-align: left; cursor:pointer; }
 #vvergleich .ui-slider .ui-slider-handle {
   /*background: #4583E0 url(https://res.makler-bund.de/h1/_images/slider.png) 50% 50% no-repeat;*/
-  background: #0167cd;
+  background: #0075AC;
   background-image: url(https://res.makler-bund.de/h1/_images/slider.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   cursor:pointer; position: absolute; z-index: 3; width: 1.6em!important; height: 1.2em!important;
 }
-#vvergleich .ui-slider .tick { z-index: 2; border-left: 2px solid #0167cd; position: absolute; height: 100%; font-size: 1.8em; line-height: 1.8em; background: none; text-align: center; }
+#vvergleich .ui-slider .tick { z-index: 2; border-left: 2px solid #0075AC; position: absolute; height: 100%; font-size: 1.8em; line-height: 1.8em; background: none; text-align: center; }
 
 #vvergleich .ui-slider-horizontal { height: .5em; margin:3px 0 3px 0; border-radius:2px; }
 #vvergleich .ui-slider-horizontal .ui-slider-handle { top: -.4em; margin-left: -.6em; border-radius:10px;-webkit-box-shadow:rgba(0,0,0,0.4) 1px 1px;box-shadow:rgba(0,0,0,0.4) 1px 1px; }
@@ -1284,7 +1284,7 @@ input[disabled], input:disabled {background-color: #E6E6E6 !important;color: #9D
 #vvergleich .sp148{width:148px}
 #vvergleich .sp200{width:200px}
 #vvergleich .sp228{width:228px}
-#vvergleich input[readonly]{color:#ff9900;background:#eee}
+#vvergleich input[readonly]{color:#575757;background:#eee}
 /* kfz rechner eingabe end */
 
 #vvergleich table .row-header { font-weight: bold; text-align: center; background-color: #4583E0; }
@@ -1485,7 +1485,7 @@ div#zeile_modellwahl_optionen{border: none;}
 div#zeile_modellwahl_optionen .sp1{height: 45px;overflow: hidden;margin-top: -10px}
 div#bereich_modellwahl .ant_box{margin-top: 10px;}
 div#antrag{width:100% !important;font-family: 'Roboto', sans-serif !important;min-height:250px;background-color: #ffffff;}
-.head{margin: 0; height: 35px; background: #0167cd;}
+.head{margin: 0; height: 35px; background: #0075AC;}
 input#btn_back {width: 100%; height: 45px; margin-top: 10px;margin-bottom: 10px;font-size: 18px !important;box-shadow: 0 1px 3px rgba(0,0,0,0.5);}
 .head_logo {display: none !important;}
 .head_ue{font-size: 20px; font-weight:normal;color:#fff;display:block;position:unset;line-height:unset !important;text-align:center;padding-top:8px}
@@ -1493,27 +1493,27 @@ input#btn_back {width: 100%; height: 45px; margin-top: 10px;margin-bottom: 10px;
 span.head_sparte:before{content: "\00a0 "}
 .ant_box{border:none; background-color:#fff;box-shadow:none;padding: 0 10px;}
 .ant_box > div{border-bottom: 1px dotted #ddd;line-height: unset;}
-div.zeile .sp1{font-size:16px;font-weight:normal;color:#ff9900}
-div.zeile .sp2{font-size:16px;font-weight:normal;color:#ff9900}
+div.zeile .sp1{font-size:16px;font-weight:normal;color:#575757}
+div.zeile .sp2{font-size:16px;font-weight:normal;color:#575757}
 /*div.zeile .sp1:hover, div.zeile .sp2:hover, div.zeile .sp1:active, div.zeile .sp2:active{font-size:16px !important;font-weight:normal !important;color:#666 !important;}
 .ant_box > div:hover, .ant_box > div:active {font-size:16px !important;font-weight:normal !important;;color:#666 !important;background: #f3f3f3 !important;}*/
-div.zeile:hover .sp1{color:#ff9900 !important;}
+div.zeile:hover .sp1{color:#A0A0A0 !important;}
 input[type=text], textarea, select{height:40px; font-size: 16px; color:#495057;border:1px solid #ced4da;background: #fff;padding: .4rem .75rem;border-radius:2px;line-height:1.5;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
 .ant_ue, .ant_ue_sepa,
 #zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben, #zeile_ges_fragen0,
 #zeile_zw_daten_pferd1, #zeile_zw_daten_pferd2, #zeile_zw_daten_pferd3, #zeile_zw_daten_pferd4,
 #zeile_zw_versicherte_personen1, #zeile_zw_versicherte_personen2, #zeile_zw_versicherte_personen3, #zeile_zw_versicherte_personen4, #zeile_zw_versicherte_personen5
-{background-color:#f5f7fa;color:#0167cd;font-size: 18px;font-weight:normal;text-align: left;height: 20px; padding:6px 10px;border: none;box-shadow:none}
+{background-color:#f5f7fa;color:#0075AC;font-size: 18px;font-weight:normal;text-align: left;height: 20px; padding:6px 10px;border: none;box-shadow:none}
 #zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben,
 #zeile_zw_daten_pferd1, #zeile_zw_daten_pferd2, #zeile_zw_daten_pferd3, #zeile_zw_daten_pferd4 {line-height: .7}
-#zeile_zw_dok_kundenangaben > .sp_colspan {color: #0167cd;padding: unset;}
+#zeile_zw_dok_kundenangaben > .sp_colspan {color: #0075AC;padding: unset;}
 div#zeile_hinweis_allgemein {padding-left: 20px;color: #dc3545;font-size: 12px;}
 #zeile_ges_fragen0 > .sp_colspan > div {line-height: .4;font-weight: normal !important;font-size: 18px !important;}
 div#zeile_ges_fragen0 {margin:0 !important}
 div[id^=zeile_ges_fragen]{border-top:none}
 div[id^=zeile_person_betraege]{padding-left:20px}
 div[id^=zeile_zw_versicherte_personen]{line-height:.5}
-.unf_person_box > .ueb_box {color: #0167cd;font-size: 12px;}
+.unf_person_box > .ueb_box {color: #0075AC;font-size: 12px;}
 .unf_person_box > .ueb_box > div > br {content: " "}
 .unf_person_box > .cont_box {font-size: 12px;padding-left: 3px;}
 #aDialog{background-color:#fff;border: 1px solid rgba(0,0,0,.2);box-shadow:none;}
@@ -1546,18 +1546,18 @@ div#zeile_bestaetigung_abschluss .sp1, div#zeile_bestaetigung_datenschutz .sp1, 
 div#zeile_bestaetigung_abschluss .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_elementarbogen .sp2, div#zeile_bestaetigung_gebaeudealter_bogen .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_scoring .sp2, div#zeile_bestaetigung_dmbRS1 .sp2, div#zeile_bestaetigung_dmbRS2 .sp2, div#zeile_bestaetigung_dmbRS3 .sp2, div#zeile_bestaetigung_opt1 .sp2, div#zeile_bestaetigung_bonitaet .sp2, div#zeile_bestaetigung_antragssteller_verzicht .sp2, div#zeile_einwilligung_t1 .sp2, div#zeile_einwilligung_t2 .sp2, div#zeile_bestaetigung_Maklerauftrag .sp2, div#zeile_cacheEingaben .sp2, div#zeile_bestaetigung_newsletter .sp2{margin-left: 20px}
 div.zeile.kaufen_bereich{background-color:#fff;border:none;border-radius:unset;}
 .kaufen_info_beitrag{font-size:22px;font-weight: normal;color:#dc3545}
-.antrag_auftrag{background: none !important;; background-color: #ff9900 !important;}
+.antrag_auftrag{background: none !important; background-color: #ff9900 !important;}
 #zeile_antrag_absenden{padding-left: 10px; padding-right: 10px;}
 .kaufen_info_ablauf, .maklereingeloggt{display: none !important;}
-.pb_button{height: 35px; background:#ff9900 !important;padding:.375rem .75rem;border-radius:2px;font-weight:normal;color: #fff;box-shadow:none;text-shadow: none;border: 1px solid transparent;}
+.pb_button{height: 35px; background:#ff9900 !important; padding:.375rem .75rem;border-radius:2px;font-weight:normal;color: #fff;box-shadow:none;text-shadow: none;border: 1px solid transparent;}
 .pb_button:hover{background: #e5943a;}
 #kaufen_button{width: 100%; font-size: 20px; height: 50px;}
 input#cancelEmailTo{width:200px !important;}
 #antragAbbrechen .abs2{font-size: 16px;}
 div#sepa_zustimmungErrorBox, div#datenschutzErrorBox, div#abschlussErrorBox {background-color: #f44336 !important;border: transparent !important;color: #fff !important;padding: 15px !important;font-weight: normal !important;font-size: 14px !important;border-radius: 2px;}
 .FormErrorBox {background-color: unset !important;border: none !important;color: #dc3545!important;font-weight: normal !important;font-size: 14px !important;padding-left: 0px !important;}
-.zeile.beratungsdok {color: #0167cd;}
-.zeile.beratungsdok .sp_colspan{color: #ff9900; padding-left: 20px;}
+.zeile.beratungsdok {color: #0075AC;}
+.zeile.beratungsdok .sp_colspan{color: #0075AC; padding-left: 20px;}
 .zeile.beratungsdok .sp_colspan p > br:nth-child(odd){content: " "}
 .zeile.beratungsdok .sp_colspan > p > strong {font-weight: 700;font-size: 14px;}
 div#zeile_tarife_empfohlen_dok .sp_colspan > textarea{width: 75% !important; margin-left:200px;}
