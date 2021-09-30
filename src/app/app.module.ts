@@ -12,12 +12,16 @@ import { PubSpaceComponent } from './pub-space/pub-space.component';
 import { PrivateSpaceComponent } from './private-space/private-space.component';
 
 import { RouterModule } from '@angular/router';
+import { ChangePasswortComponent } from './change-passwort/change-passwort.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PubSpaceComponent,
-    PrivateSpaceComponent
+    PrivateSpaceComponent,
+    ChangePasswortComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

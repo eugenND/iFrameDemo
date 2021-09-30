@@ -21,7 +21,6 @@ export class PrivateSpaceComponent implements OnInit {
 
   public logout(): void{
     this.kcService.logout('http://localhost:4222');
-
   }
 
 }

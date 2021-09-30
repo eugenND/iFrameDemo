@@ -1,14 +1,20 @@
 <h1>Demo-Demo-Test-Test</h1>
 <div><a routerLink="/public" routerLinkActive="router-link-active">Public</a></div>
-<div><a routerLink="/private" routerLinkActive="router-link-active">Private</a></div>
 <br>
+<div>
+  <button type="button" class="btn btn-primary" a routerLink="/private" routerLinkActive="router-link-active"> Private </button>
+</div>
+
+<br>
+
+<app-change-passwort></app-change-passwort>
+
+<br>
+
 <router-outlet></router-outlet>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -325,6 +331,7 @@
   </div>
 
 <!-- ------------------------------------------------------------------------------------------------------------- -->
+  <br>
   <button type="button" class="btn btn-primary" (click)="openModal(template)">Open Landing-Page</button>
 
   <ng-template #template>
