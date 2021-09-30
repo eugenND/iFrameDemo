@@ -1,0 +1,1731 @@
+/* CSS Eingabe und Antrag BKR Fragezeichen selektiv
+*  Antrag -> /var/www/myneo.neodigital.de/html/assets/css/...
+* CSS unter Adminbereich Mr.Money nicht mehr gebraucht,
+* Eingabe -> Übergabe als Parameter direkt in der Iframe URL
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body, html { margin:0; padding: 0;}
+
+input{box-sizing:border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+select {padding: .38rem .75rem !important;}
+input#fahrrad, input#wohnfl{width: 80% !important;}
+/* WGB weiter btn */
+input#btn_w_part_1 {width: 100%;}
+.formAlertBox {border:none !important; background-color:transparent !important; color:red !important; font-weight:normal !important; padding:0 !important;border-radius:unset !important; margin:0 !important; font-size:14px !important;}
+input[type="button"], input[type="submit"] {
+  background: #95ac29 !important;
+  border-color: #95ac29 !important;
+  border-radius: 2px !important;
+  color: #fff !important;
+  box-shadow: none;
+  display: inline-block;
+  text-align: center !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  user-select: none !important;
+  border: 1px solid transparent !important;
+  line-height: 1.5 !important;
+  cursor:pointer !important;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+#vvergleich input.form-button {
+  font-size: 22px !important;
+  font-weight: normal !important;
+  padding: 4px !important;
+}
+input#btn_berechnen, input.form-button.btn-berechnen {width: 98%; margin-left: 10px !important;}
+input.form-button.btn-neuervgl {width: 100%;}
+img#b_loading {
+  /* visibility: hidden; */
+  position: relative;
+  left: 20px;
+  bottom: 37px;
+  opacity: 0.5;
+}
+
+span.autocomplete_error {
+  color: red;
+  font-size: 12px;
+  position: relative;
+  top: -7px;
+}
+
+#vvergleich > a + p, .sortierung.tarif_sort, a#angSpeichern, a#angSpeichern ~ p, a.filter_email, #tbl_tr_papierlos, #tbl_tr_chipnr, #tbl_tr_lebensnr,
+#tr_ausfall, #tr_delikt, #tr_deliktverssumme, #tr_deliktsb, #tr_rsausfall, #tr_Hundn, #tr_laufzeit, #tr_beamte, #tr_rabattangaben, #tbl_tr_rabattangaben, #tr_papierlos, #tr_zahlungsart, #tbl_tr_zahlungsart,
+#tbl_tr_beamte, #tbl_tr_sb, #tbl_tr_laufzeit, #tr_fehlendeadresse, #tr_verssummeauto, #tr_grob,
+#tr_knochen1, #tr_knochen2, #tr_knochen3, #tr_knochen4, #tr_knochen5, #tr_knochen6, #tr_knochen7, #tr_knochen8,
+#tr_gliedertaxe_zw1, #tr_gliedertaxe_zw2, #tr_gliedertaxe_zw3, #tr_gliedertaxe_zw4, #tr_gliedertaxe_zw5, #tr_gliedertaxe_zw6, #tr_gliedertaxe_zw7, #tr_gliedertaxe_zw8,
+#tr_gliedereur1, #tr_gliedereur2, #tr_gliedereur3, #tr_gliedereur4, #tr_gliedereur5, #tr_gliedereur6, #tr_gliedereur7, #tr_gliedereur8,
+#tr_gliedertaxe1, #tr_gliedertaxe2, #tr_gliedertaxe3, #tr_gliedertaxe4, #tr_gliedertaxe5, #tr_gliedertaxe6, #tr_gliedertaxe7, #tr_gliedertaxe8,
+#DIV_Gliedertaxe, .filter_nachhaltigkeit,
+.resultFilter > .beitrag, .resultFilter > .prozent,
+.ergebnisBox.ergebnisHeader ~ a, .sortInfo,
+.filter_kuendigungshilfe, .filter_print, div[id^=tr_ueber],div[id^=tr_utg],select[id=radtyp] option[value="Pedelec/E-Bike (versicherungspflichtig)"],select[id=nutzung] option[value="Mitarbeiterleasing"],select[id=nutzung] option[value^="Firmenfahrr"],
+div[id^=tr_prog] .cell.sp2.col1-data select[id^=prog] option[value="300"], div[id^=tr_prog] .cell.sp2.col1-data select[id^=prog] option[value="600"], div[id^=tr_prog] .cell.sp2.col1-data select[id^=prog] option[value="1000"],
+select[id=versicherungsschutz] option[value="feu"], select[id=beginn] option[value="2020"],
+select[id=gebaeude] option[value="Mehrfamilienhaus"], select[id=gebaeude] option[value="Doppelhaus"], select[id=gebaeude] option[value="Reihenhaus"], select[id=gebaeude] option[value="Doppelhaushälfte"],
+.eingabeBox.wohngebaude div#tr_zusatzeinschluesseInfo, select[id=Feuerschutz] option[value="nein"], select[id=Leitungswasser] option[value="nein"], select[id=SturmHagel] option[value="nein"], select[id=selbst] option[value="2000"],
+select[id=vermiet] option[value="6"], #btn-angebot-empty
+{display: none !important;}
+
+div#optionCompare {display: none !important;}
+div#optionCompareHead {background-color: unset !important;color: #4a6985;font-size: 22px !important;}
+div#optionCompareOut {border: none !important;display: block !important;}
+
+/* Alte Bezeichnung uber die font-size ueberschreiben wegen Fehlermeldung die von MM kommt */
+.header_line > .cell.sp1_6.header {
+   font-size: 0 !important;
+   /* color: transparent !important; */
+}
+
+.eingabeBox > .line.header_line:after { color: #fff; text-align: center; position: absolute; width: 100%; top: 12px; font-size: 22px;}
+/* .eingabeBox.unfall > .line.header_line:after {content: "Unfallversicherung"}
+.eingabeBox.haftpflicht > .line.header_line:after {content: "Privathaftpflichtversicherung"}
+.eingabeBox.tierhalter > .line.header_line:after {content: "Tierhalterhaftpflichtversicherung"}
+.eingabeBox.gradient.hausrat > .line.header_line:after {content: "=>Hausratversicherung"}
+.eingabeBox.bike > .line.header_line:after {content: "Fahrrad"}
+.eingabeBox.rechtsschutz > .line.header_line:after {content: "Rechtsschutzversicherung"}
+.eingabeBox.wohngebaude > .line.header_line:after {content: "Wohngeb.-Versicherung"} */
+
+.eingabeBox.gradient.hausrat > .line.header_line > .cell.sp1_6.header:after{
+  content: "Hausratversicherung";
+  font-size: 22px;
+}
+.eingabeBox.unfall > .line.header_line > .cell.sp1_6.header:after{
+  content: "Unfallversicherung";
+  font-size: 22px;
+}
+.eingabeBox.haftpflicht > .line.header_line > .cell.sp1_6.header:after{
+  content: "Privathaftpflichtversicherung";
+  font-size: 22px;
+}
+.eingabeBox.tierhalter > .line.header_line > .cell.sp1_6.header:after{
+  content: "Tierhalterhaftpflichtversicherung";
+  font-size: 22px;
+}
+.eingabeBox.bike > .line.header_line > .cell.sp1_6.header:after{
+  content: "Fahrrad";
+  font-size: 22px;
+}
+.eingabeBox.rechtsschutz > .line.header_line > .cell.sp1_6.header:after{
+  content: "Rechtsschutzversicherung";
+  font-size: 22px;
+}
+.eingabeBox.wohngebaude > .line.header_line > .cell.sp1_6.header:after{
+  content: "Wohngeb.-Versicherung";
+  font-size: 22px;
+}
+
+
+/* Pedelec Infobox */
+.hrInfoBox {
+  display: none;
+}
+
+/* allg. Fragen Fragezeichen */
+/* Hausrat Glasversicherung*/
+#tr_glas a.infoicon.tTip {
+  display: none;
+}
+/* Hausrat Bauartklasse*/
+a.infoicon.tTip[data-title*='Schilf, Reed, Holz ausgestattet'] {
+  display: none !important;
+}
+/* PHV Plz*/
+.eingabeBox.haftpflicht #tr_plz a.infoicon.tTip {
+  display: none;
+}
+/* Alter*/
+#tr_alter a.infoicon.tTip {
+  display: none;
+}
+/* Vorversicherung*/
+#tr_vorvers5 a.infoicon.tTip {
+  display: none;
+}
+/* Vorschaden*/
+#tr_schaeden5 a.infoicon.tTip {
+  display: none;
+}
+/* Alter THV*/
+#tbl_tr_alter a.infoicon.tTip {
+  display: none;
+}
+/* Anzahl Tiere */
+#tbl_tr_anzahldertiere a.infoicon.tTip {
+  display: none;
+}
+/* Vorversicherung THV*/
+#tbl_tr_vorvers5 a.infoicon.tTip {
+  display: none;
+}
+/* Vorschaden THV*/
+#tbl_tr_schaeden5 a.infoicon.tTip {
+  display: none;
+}
+/* Unfall Plz*/
+.eingabeBox.unfall #tr_plz a.infoicon.tTip {
+  display: none;
+}
+/* Grundinvalidität */
+#tr_grund1 a.infoicon.tTip {
+  display: none;
+}
+/* Progress. */
+#tr_prog1 a.infoicon.tTip {
+  display: none;
+}
+/* Khtg. */
+#tr_kh1 a.infoicon.tTip {
+  display: none;
+}
+/* Unfall Rente */
+#tr_rente1 a.infoicon.tTip {
+  display: none;
+}
+/*DetailFragen */
+/* alles ausblenden außer headline */
+#detailFragen .line ~ .line {
+  display: none;
+}
+/*DetailFragen WG einblenden */
+div#tr_aufr_v, div#tr_ues_v, div#tr_nutz_v, div#tr_kost_v, div#tr_bewo_v, div#tr_feu_v, div#tr_denk_v, div#tr_sons_v, div#tr_rueck_v, div#tr_zui_v, div#tr_zua_v,
+div#tr_abi_v, div#tr_aba_v, div#tr_rohr_v, div#tr_wave_v, div#tr_kfz_v, div#tr_graf_v, div#tr_einb_v, div#tr_urla_v, div#tr_baum_v, div#tr_erd_v, div#tr_all_v {
+  display: block !important;
+}
+/* Unfall
+* Eigenbewegungen */
+div#tr_eigen_v {
+  display: inline !important;
+}
+/* Kraftanstrengung  */
+div#tr_kraft_v {
+  display: inline !important;
+}
+/* Trunkenheit  */
+div#tr_alk_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_alk_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Vergiftungen durch Gase und Dämpfe */
+div#tr_gift_v {
+  display: inline !important;
+}
+/* Mitversichern von Vergiftungen bei Kindern */
+div#tr_kgif_v {
+  display: inline !important;
+}
+/* Mitversichern von Schäden durch Röntgen */
+div#tr_stral_v {
+  display: inline !important;
+}
+/* Übernachtung Erziehungsberechtigter im Krankenhaus */
+div#tr_room_v {
+  display: inline !important;
+}
+/* Nahrungsmittelvergiftungen */
+div#tr_nahr_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_nahr_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/*  tauchtypischen Gesundheitsschäden */
+div#tr_tauch_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_tauch_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Sofortleistung bei schweren Unfällen */
+div#tr_sofo_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_sofo_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Zahnersatz */
+div#tr_zahn_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_zahn_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Insektenstichen */
+div#tr_insekt_v {
+  display: inline !important;
+}
+/* Mitwirkung von Krankheiten/Gebrechen */
+div#tr_mitw_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_mitw_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* erweiterte Meldefrist */
+div#tr_frist_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_frist_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* einmalige Kapitalzahlung */
+div#tr_kap_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_kap_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Haushaltshilfe */
+div#tr_haus_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_haus_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Umschulungsmaßnahmen */
+div#tr_schul_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_schul_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Bergungskosten */
+div#tr_berg_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_berg_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Mitversichern von Körperschäden */
+div#tr_rett_v {
+  display: inline !important;
+}
+/* Leistungsverbesserungen */
+div#tr_leiupd_v {
+  display: inline !important;
+}
+
+/* THV
+* Beitragsrelevante Angaben */
+div#tr_beitragsrelevant_v {
+  display: none !important;
+}
+/* Nebenberufliche Tätigkeit bis 17.500 */
+div#tr_tier_nebenberuf_v {
+  display: none !important;
+}
+/* Nachweis für den Besuch einer Hundeschule */
+div#tr_hund_schule_v {
+  display: none !important;
+}
+/* Stockmaß des Pferdes */
+div#tr_pferd_stockmass_v {
+  display: none !important;
+}
+/* Reitpass */
+div#tr_reitpass_v {
+  display: none !important;
+}
+/* Fragezeichen Nehmen die Tiere an Wettkämpfen*/
+div#tr_sport_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Fragezeichen Pferderennen*/
+div#tr_pferderennen_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Sind Sie Mitglied im Reitverein?*/
+div#tr_verein_v {
+  display: none !important;
+}
+/* Fragezeichen Kutsche*/
+div#tr_kutsch_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Stellen Sie Ihr Pferd Schulungszwecken zur Verfügung */
+.eingabeBox.tierhalter ~ #box_eu > .eingabeBox > div#tr_schul_v {
+  display: none !important;
+}
+/* Fragezeichen Flurschad*/
+div#tr_flur_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+
+/* PHV
+* Mindest-Versicherungssumme Personen/Sachschäden */
+div#tr_vs_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_vs_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Mindest-Versicherungssumme für Mietsachschäden */
+div#tr_vsm_v {
+  display: inline !important;
+}
+/* Mindest-Versicherungssumme für Vermögensschäden*/
+div#tr_vsv_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_vsv_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Selbstgenutztes Wohneigentum */
+div#tr_sgwe_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_sgwe_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Eigentumswohnungen in Deutschland, vermietet */
+div#tr_ew_v {
+  display: inline !important;
+}
+/* Unbebautes Grundstück */
+div#tr_unbgru_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_unbgru_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Einliegerwohnung vermietet im selbstbewohnten Haus */
+div#tr_einlw_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_einlw_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Ferienhaus-/Wohnung im Inland selbstgenutzt */
+div#tr_fewoi_v {
+  display: inline !important;
+}
+/*  Ferienhaus im europ. Ausland ohne Vermietung */
+div#tr_fewoa_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_fewoa_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Fachpraktischer Unterricht */
+div#tr_fach_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_fach_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Hüten eines fremden Hundes */
+div#tr_tier_v {
+  display: inline !important;
+}
+/* Allmählichkeitsschäden */
+div#tr_allm_v {
+  display: inline !important;
+}
+/* Gewässerschäden */
+div#tr_gewsa_v {
+  display: inline !important;
+}
+/* Schäden durch häusliche Abwässer */
+div#tr_abwa_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_abwa_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* elektronischen Datenaustausch/Internetnutzung */
+div#tr_inet_v {
+  display: inline !important;
+}
+/* Gefälligkeitsschäden */
+div#tr_gef_v {
+  display: inline !important;
+}
+/* Gemietete oder geliehene Sachen */
+div#tr_geli_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_geli_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Schlüsselverlust */
+div#tr_sv_v {
+  display: inline !important;
+}
+/* Schlüsselverlust für Zentrale Schließanlage */
+div#tr_sva_v {
+  display: inline !important;
+}
+/* Schlüsselverlust von fremden Dienstschlüsseln */
+div#tr_svd_v {
+  display: inline !important;
+}
+/* Weltweite Deckung */
+div#tr_welt_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_welt_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Alleinstehendes Elternteil */
+div#tr_elt_v {
+  display: inline !important;
+}
+/* Ehrenamtliche Tätigkeit */
+div#tr_ehr_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_ehr_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Tätigkeit als Tagesmutter */
+div#tr_tagmu_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_tagmu_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Regressansprüche von Sozialversicherungsträgern */
+div#tr_regr_v {
+  display: inline !important;
+}
+/* Bauherrenhaftpflicht am Haus oder */
+div#tr_bau_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_bau_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Eigene Surfbretter */
+div#tr_surf_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_surf_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Benutzen Sie eigene Wasserfahrzeuge */
+div#tr_wafa_v {
+  display: inline !important;
+}
+/* Besitzen Sie Modellflugzeuge */
+div#tr_flug_v {
+  display: inline !important;
+}
+/* Besitzen Sie privat genutzte Drohnen */
+div#tr_drohne_v {
+  display: inline !important;
+}
+/* Betreiben Sie eine Photovoltaikanlage */
+div#tr_foto_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_foto_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+
+/* HR
+* Überspannungsschäden */
+div#tr_ues_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_ues_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Diebstahl von Kinderwagen */
+div#tr_dieb_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_dieb_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Diebstahl von KFZ */
+div#tr_dkfz_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_dkfz_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Diebstahl von Wäsche */
+div#tr_dkle_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_dkle_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Schäden durch Verpuffung, */
+div#tr_rauch_v {
+  display: inline !important;
+}
+/* Schäden durch Anprall */
+div#tr_kfz_v {
+  display: inline !important;
+}
+/* Sachen in Bankgewahrsam */
+div#tr_bank_v {
+  display: inline !important;
+}
+/* Diebstahl von Gartenmöbeln */
+div#tr_dgar_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_dgar_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Haben Sie Aquarien */
+div#tr_was_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_was_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Sollen Sengschäden */
+div#tr_seng_v {
+  display: inline !important;
+}
+/* Wasserverlust */
+div#tr_waver_v {
+  display: inline !important;
+}
+/* Hotelkosten */
+div#tr_hot_v {
+  display: inline !important;
+}
+/* Rückreisekosten */
+div#tr_reis_v {
+  display: inline !important;
+}
+/*  häuslichen Arbeitszimme */
+div#tr_arb_v {
+  display: inline !important;
+}
+/*  60 Tage unbew */
+div#tr_bewo_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_bewo_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* Stahlschrank  */
+div#tr_tres_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_tres_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+/* erhöhte Feuergefahr  */
+div#tr_feu_v {
+  display: inline !important;
+}
+/* Fragezeichen */
+div#tr_feu_v .cell.sp3.col1-info {
+  visibility: hidden;
+}
+
+#vvergleich .eingabeBox.tierhalter .cell.sp3 {width: 24px !important;}
+
+form[name="FormularErg"]{padding: 15px !important}
+input#mrmoAGB { margin-bottom: 15px !important}
+a#angSpeichern {margin-left: 10px;}
+
+div#mrmoAGBError {background-color: unset !important;border: none !important;margin-left: 6px;}
+
+a.filter_email > img {display: none;}
+a.filter_email:after{content: "Ergebnis per E-Mail schicken"}
+.filter_email{margin-left: 10px;}
+
+#vvergleich input.btn-leivgl-oben{margin-bottom:10px;width:200px !important}
+#vvergleich input.btn-leivgl-unten {width:200px !important;}
+#vvergleich .vergleichbutton-box {margin-top: 10px !important;}
+.lvg_pfeil_oben > img, .lvg_pfeil_unten > img {display: none;}
+.lvg_pfeil_oben:before {font-family: FontAwesome; content: "\f063"; margin-left: 10px; margin-right:8px; font-size: 20px}
+.lvg_pfeil_unten:before {font-family: FontAwesome; content: "\f062"; margin-left: 10px; margin-right:8px; font-size: 20px}
+
+.ergebnisBox > .line{text-align: center}
+.ergebnisBox > .line > .innerbox{display: inline-block;}
+/*.ergebnisBox .line .innerbox .cell.sp4 {display: none;}*/
+
+#vvergleich div,#vvergleich dl,#vvergleich dt,#vvergleich dd,#vvergleich ul,#vvergleich ol,#vvergleich li,#vvergleich h1,#vvergleich h2,#vvergleich h3,#vvergleich h4,#vvergleich h5,#vvergleich h6,#vvergleich pre,#vvergleich code,#vvergleich form,#vvergleich fieldset,#vvergleich legend,#vvergleich input,#vvergleich button,#vvergleich textarea,#vvergleich blockquote,#vvergleich th,#vvergleich td{margin:0;padding:0;}#vvergleich table{border-collapse:collapse;border-spacing:0;}#vvergleich fieldset,#vvergleich img{border:0;}#vvergleich address,#vvergleich caption,#vvergleich cite,#vvergleich code,#vvergleich dfn,#vvergleich em,#vvergleich th,#vvergleich var,#vvergleich optgroup{font-style:inherit;font-weight:inherit;}#vvergleich del,#vvergleich ins{text-decoration:none;}#vvergleich li{list-style:none;}#vvergleich caption,#vvergleich th{text-align:left;}#vvergleich h1,#vvergleich h2,#vvergleich h3,#vvergleich h4,#vvergleich h5,#vvergleich h6{font-size:100%;font-weight:normal;}#vvergleich q:before,#vvergleich q:after{content:'';}#vvergleich abbr,#vvergleich acronym{border:0;font-variant:normal;}#vvergleich sup{vertical-align:baseline;}#vvergleich sub{vertical-align:baseline;}#vvergleich legend{color:#3b3b3a;}#vvergleich input,#vvergleich button,#vvergleich textarea,#vvergleich select,#vvergleich optgroup,#vvergleich option{}#vvergleich input,#vvergleich button,#vvergleich textarea,#vvergleich select{font-size:100%;}
+#vvergleich { color:#3b3b3a;background:#FFF; font-family:Roboto,sans-serif; font-size:16px; text-align:left; width:auto; margin:0 auto; line-height:13px!important;}
+#vvergleich.contentlvg {width:auto;	margin:0;}
+#vvergleich p {margin:10px;	padding:0;}
+#vergleich label {font-size:12px;}
+.freeze, .freeze *{cursor:progress !important;}
+
+#vvergleich .fett {font-weight:bold;}
+#vvergleich .faqlink {text-decoration:none;}
+#vvergleich .hidden	{display: none!important;}
+#vvergleich .visible {visibility: visible;}
+
+.hilfehidden { display: none; }
+.hilfevisible { visibility: visible; background-color:#f5f7fa; color:#3b3b3a;}
+
+#vvergleich #box_faq .ues { font-weight:bold!important }
+#vvergleich #box_faq table {text-align:left;}
+#vvergleich #box_faq table ol li {text-align:left; padding:2px 0!important}
+#vvergleich #box_faq table ul { font-size:16px!important; line-height:12px!important; }
+#vvergleich #box_faq table ul li {margin:10px 0 10px 0!important; line-height:14px!important; }
+
+#vvergleich a {color:#95ac29;text-decoration:underline;font-size:16px;}
+#vvergleich a:active {color:#666;}
+#vvergleich a:hover, #vvergleich a:active, #vvergleich a:visited, #vvergleich a:focus  {background-color:inherit;}
+#vvergleich a.infofeld {position: relative; z-index:50;}
+
+#vvergleich a.infofeld:hover {background: #66FFFF;text-decoration:none;}
+#vvergleich a.infofeld span {display: none;}
+#vvergleich a.infofeld:hover span {display:block;position:absolute;top:-1em;left:15em;width:25em;border:1px solid #3b3b3a;padding:2px;background:#C0C0C0;color:#3b3b3a;text-align: left;text-decoration:none;font-size:12px;z-index:100;}
+
+#vvergleich h2 {font-size:14px;font-weight:bold;color:#FF0000;margin:10px 0 15px 0;}
+
+#vvergleich table {color: #3b3b3a;line-height:16px;margin:0 auto !important;}
+
+table.table-leistungv2.ergebnisse tr td div.inner_text {overflow-y: hidden !important;}
+
+img.lvg_zoom_info.lvg_zoom_info_in, img.lvg_zoom_info.lvg_zoom_info_out{display: none}
+.caption.caption_mediation.lineMrMoneyn > td > div {color: #95ac29; text-decoration: underline;font-size: 14px;font-weight: normal}
+.caption.caption_mediation.lineMrMoneyn > td > div:before{font-family: FontAwesome;content: "\f05a"}
+.capDOKS.lineMrMoney td a{font-size:11px !important;}
+a.aLvgSuche {text-decoration: none !important;}
+a.aLvgSuche > img{display: none}
+a.aLvgSuche:before {font-family: FontAwesome;content: "\f059"; font-size: 22px}
+#vvergleich table.table-leistungv2.ergebnisse tr td .inner_caption a{color: #95ac29 !important;text-decoration: underline;font-size: 14px !important;}
+td.wertung.row-2 > img, td.wertung.row-1 > img, .schluss.legende {opacity: .6}
+
+#vvergleich .chktext {margin:0 0 5px 0;}
+
+#vvergleich .eingabe_oeffnen {float:right;}
+#vvergleich .eingabe_schliessen {float:right;display:none;}
+
+#vvergleich p.error {font-weight:bold;color:#cc0000;margin:30px 0;padding:10px;border:1px solid #cc0000;background-color:#f5f7fa;}
+
+#vvergleich .row-antrag {font-weight: bold;color: #3b3b3a; background-color: #B1C6E8;}
+#vvergleich .row-anleitung {color: #999;text-align:right;}
+#vvergleich .anleitung {color: #3b3b3a;text-align:left;}
+#vvergleich .info {font-size: 10px;color: #3b3b3a;}
+
+#vvergleich .vergleichlink { font-size:16px }
+#vvergleich #tarife_email_senden { padding: 5px 0 5px 10px; }
+#vvergleich #tarife_email_senden .caption1 { font-weight: bold; font-size: 12px; color: #444; margin: 0 0 3px 0; }
+#vvergleich #tarife_email_senden .caption2 { font-weight: normal; font-size: 16px!important; color: #3b3b3a; margin: 0 0 5px 0; }
+input#email_angebot { width: 240px; }
+#lnk_email_angebot_zusenden { display: inline-block;  }
+#vvergleich #tarife_email_senden a { font-size:12px!important }
+
+#vvergleich .ergebnis_print { margin: 10px 10px 0 0; }
+
+#email_angebot_ok .info {font-size:12px;font-weight:bold;color:green;}
+
+/* Formatierung und Darstellung der Formularfelder */
+
+#vvergleich input.form-button {
+  background-color: #FFCC66;
+  background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1)));
+  background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 );
+  font-size: 13px;color: #3b3b3a;font-weight:bold;padding: 1px 6px;margin:0 0 10px 0;line-height: 18px; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.5);border: 1px solid rgba(0,0,0,0.25);cursor: pointer}
+*+html #vvergleich input.form-button {border:1px solid #666666;}
+#vvergleich input.form-button.clicked { box-shadow: none; }
+#vvergleich input.form-button:hover {background-color:#ffee91;}
+#vvergleich input.form-button:active {background-color:#FFCC66;}
+#vvergleich input.form-button-krebs {font-size: 16px;color: #3b3b3a;font-weight:bold;border: 1px solid #3b3b3a;background: #FFFFFF;padding:2px;margin:0 0 0 10px;}
+#vvergleich .vergleichbutton {
+  background-color: #FFCC66;
+  background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1)));
+  background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  background: linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 );
+  font-size: 13px;color: #3b3b3a;font-weight:bold;padding: 1px 6px;margin:0;line-height: 18px;border-radius: 5px;box-shadow: 0 1px 3px rgba(0,0,0,0.5);border: 1px solid rgba(0,0,0,0.25);cursor: pointer;}
+*+html #vvergleich .vergleichbutton {border:1px solid #666666;}
+#vvergleich .vergleichbutton.clicked { box-shadow: none; }
+#vvergleich .vergleichbutton:hover {background-color:#ffee91;}
+#vvergleich .vergleichbutton:active {background-color:#FFCC66;}
+
+/* Für CSS Designer im ADMIN von versicherungsmaklersoftware.de */
+#vvergleich input.btn-berechnen {}
+#vvergleich input.btn-neuervgl {}
+#vvergleich input.btn-leivgl-oben {}
+#vvergleich input.btn-leivgl-unten {}
+#vvergleich input.btn-weiter {}
+#vvergleich input.btn-zurueck {}
+
+#vvergleich input.form-text {font-size: 16px; width: 100%; color: #495057;border: 1px solid #ced4da;background: #FFFFFF; padding: .4rem .75rem; border-radius:2px; line-height:1.5; transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;}
+#vvergleich input.form-checkbox {color: #495057;border: 0;margin:0 5px 0 5px;}
+#vvergleich .form-area {font-size: 16px;color: #495057;border: 1px solid #ced4da;background: #FFFFFF;}
+#vvergleich select.form-select {font-size: 16px; height: 40px; width: 100%; color: #495057;border: 1px solid #ced4da;background: #FFFFFF; padding: .375rem .5rem; border-radius:2px; line-height:1.5; transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;}
+#vvergleich .fehler {font-weight:bold;color:#FF0000;}
+
+/* eingabe begin */
+#vvergleich .select_markiert { background-color:#fc6!important; }
+#vvergleich .eingabeBox { width: 100%; margin:0 auto 8px auto;}
+
+#vvergleich .eingabeBox .line {vertical-align:middle; border-bottom:1px dotted #ddd; width:100%; background-color:#fff}
+
+#vvergleich .eingabeBox .line .cell{float:left;vertical-align: middle; font-size:22px; margin:1px 0 2px 0;min-height: 21px;line-height: 28px; padding:4px 3px 0 3px;}
+#tr_rabattangaben > div.cell.sp1_6 > center > strong > strong {font-weight: 400; color: #3b3b3a;}
+#vvergleich .eingabeBox .line label { font-size:16px }
+#vvergleich .eingabeBox .cell.sp1 {width:46% !important;height:auto;margin-right:10px; margin-left:20px; text-align:right; font-size:16px; font-weight:normal; color:#666}
+#vvergleich .eingabeBox .cell.sp2 {width:44% !important;text-align:left;margin-left:10px}
+#vvergleich .eingabeBox .cell.sp3 {width:24px;text-align:center; float:left}
+#vvergleich .eingabeBox .cell.sp1_6 {width:100%;}
+#vvergleich .eingabeBox .cell.header{
+  background-color: #4a6985;
+  height: 30px;
+  color:#FFFFFF;text-align:center;margin:0}
+#vvergleich .eingabeBox .header2 {margin:0!important; background-color:#5faef6!important; color:#fff!important;}
+#vvergleich .eingabeBox .header2 .cell{background-color:#5faef6!important; color:#fff!important;}
+
+#vvergleich .eingabeBox .cell.z-w-navi .btn-weiter {  float:right }
+#vvergleich .eingabeBox .cellhelp {padding:2px 3px; background-color:#f5f7fa; color:#3b3b3a;}
+/* Sondereinstellung für WG Rechner */
+#vvergleich .eingabeBox .tabl_part_2,
+#vvergleich .eingabeBox .tabl_part_3 { display:none }
+#vvergleich .eingabeBox .tabl_part_2 .cell.sp1 {width:111px;}
+#vvergleich .eingabeBox .tabl_part_2 .cell.sp2 {width:400px;}
+
+#vvergleich .eingabeBox .form-checkbox { margin-top:4px; font-size:16px }
+#vvergleich .eingabeBox .form-text { font-size:16px; }
+#vvergleich .eingabeBox .form-select { font-size:16px }
+
+#detailFragen .cell.sp1 {width:45%!important}
+#detailFragen .cell.sp2 {width:45%!important}
+
+/* Sondereinstellung für Risikolv Rechner */
+#vvergleich .eingabeBox.risikolv .reihe-2, #vvergleich .eingabeBox.risikolv .reihe-3 { border-bottom:1px dotted #ccc }
+#vvergleich .eingabeBox.risikolv .reihe-2, #vvergleich .eingabeBox.risikolv .reihe-3, #vvergleich .eingabeBox.risikolv .reihe-4 { padding-bottom: 4px;}
+#vvergleich .eingabeBox.risikolv .cell.sp1 {width:45%;}
+#vvergleich .eingabeBox.risikolv .cell.sp2 {width:18%;}
+#vvergleich .eingabeBox.risikolv .cell.sp3 {width:18%;}
+
+#vvergleich .eingabeBox.inhalt #Elektronik_Verssumme,
+#vvergleich .eingabeBox.inhalt #Autoinhalt_Verssumme { width: 100px; }
+
+#vvergleich .eingabeBox.fragemasken .cell.sp1 { width: 27% }
+#vvergleich .eingabeBox.fragemasken .cell.sp2 { width: 60% }
+
+#tbl_before td {padding:3px 5px;}
+#tbl_before {width:602px;margin:0 auto;border-left:1px solid #c5c5c5;border-right:1px solid #c5c5c5;border-bottom:1px solid #c5c5c5;}
+#box_eu {width:100%;margin:0 auto;}
+#detailFragen {width:100%;margin:0 auto;}
+#detailFragen td{padding:3px 5px;}
+#gesinfo_dialog {display:none;}
+table#tbl_GesellListe,
+table#tbl_vorgaben { width:100%;margin:0 auto; }
+#vvergleich table.info-bauklassen td { padding:4px; border:1px solid #ccc }
+
+#vvergleich a.infoicon {display:inline-block; background:none; background-repeat: no-repeat; background-position: top right; vertical-align:middle; cursor:help; padding-right:20px; height:20px; font-size:12px; text-decoration: none; }
+#vvergleich a.infoicon::before {font-family: FontAwesome; content: "\f29c"; color: #4a6985; font-size:22px}
+#vvergleich .eingabeBox a.infoicon {padding-right:0; background-position:top center; margin-top:0!important}
+#vvergleich a.quickinfo { text-decoration:none; border-bottom:1px dotted #3b3b3a; display:inline!important }
+#vvergleich .clear {clear:both;height:0; font-size:0 }
+
+/* eingabe end */
+
+#vvergleich .ergebnisBox-out { width: 100%; border-bottom:1px solid #c5c5c5; margin:0 auto; }
+#vvergleich .ergebnisBox { border:1px solid #c5c5c5; border-bottom:0; background-color:#fff; }
+
+#vvergleich .ergebnisBox  .innerbox { display: flex; flex-wrap: wrap; padding:10px;}
+#vvergleich .ergebnisBox.tipp { border:6px solid #ffce48;}
+#vvergleich .ergebnisBox .tipp_header {background-color: #FFCE48;font-weight:bold;letter-spacing:2px;font-size:14px;padding:0 3px 3px 3px; text-align:center}
+#vvergleich .ergebnisBox .tipp_header a {text-decoration:none}
+#vvergleich .ergebnisBox .tipp_text {font-size:12px; color:#3b3b3a; border-bottom:1px dotted #999; line-height:14px; position:relative; background-color:#fff; text-align:left; font-weight:normal; letter-spacing:0}
+#vvergleich .ergebnisBox .tipp_text_body { padding:5px 5px 7px 5px;  }
+#vvergleich .ergebnisBox.letzter_tipp { border-bottom:2px solid #fbcb8c; margin-bottom:5px }
+
+#vvergleich .ergebnisBox.tipp .line { }
+#vvergleich .ergebnisBox .line .cell{white-space: nowrap;flex-grow: 1}
+.ergebnisBox .line .innerbox .cell.sp1 {width: 150px;}
+
+a.tarif_gesinfo > div {margin: 0 auto !important;display: block !important;}
+
+#vvergleich .ergebnisBox.reise .normal_header {background-color:#eee;font-weight:bold;color:#666;font-size:12px;padding:3px 3px 3px 20px; text-align:left}
+/*#vvergleich .ergebnisBox .line .cell.sp1 {width: 110px;text-align: center;height:90px;position:relative;display:table; white-space:normal;}*/
+#vvergleich .ergebnisBox .line .cell.sp1 a {text-decoration:none;font-size:12px;cursor:help;}
+/*#vvergleich .ergebnisBox .line .cell.sp1 .label {text-decoration:underline;white-space:normal;width:110px;display:inline-block;}*/
+/*#vvergleich .ergebnisBox .line .cell.sp1 img {margin-bottom:5px;border:0;cursor:help;}*/
+#vvergleich .ergebnisBox .line .cell.sp1 .bewertung img {cursor:pointer;}
+#vvergleich .nicht_bewertet {font-size:9px; color:#666; font-style:italic}
+
+.setting{display: flex}
+.setting_left,.setting_right{flex-basis: 0; flex-grow: 1}
+#vvergleich .ergebnisBox .cell.sp2 .setting * { }
+#vvergleich .ergebnisBox .cell.sp2 .setting {line-height:19px}
+#vvergleich .ergebnisBox .cell.sp2 .setting .lstg_gliedertaxe { font-weight:bold }
+#vvergleich .ergebnisBox .cell.sp2 .setting .tarif_vs_info { font-weight:bold; color:#333}
+#vvergleich .ergebnisBox .cell.sp2 .setting_left {text-align:right;}
+#vvergleich .ergebnisBox .cell.sp2 .setting_right {text-align:left !important;margin-left:10px !important;}
+#vvergleich .ergebnisBox .cell.sp2 .setting_right .pers { font-size:16px; }
+#vvergleich .ergebnisBox .cell.sp2 .setting_right a {white-space:normal; text-decoration:none; line-height:17px}
+
+/*#vvergleich .ergebnisBox .cell.sp4{width:106px;text-align:left; position:relative;}*/
+/*#vvergleich .ergebnisBox .cell.sp5{width:90px; padding-top:0}*/
+#vvergleich .ergebnisBox .cell.sp5 .zahlweise{font-size:12px; margin-top:4px; margin-bottom:8px; color:#666}
+/*#vvergleich .ergebnisBox .cell.sp6{width:16px;text-align:right; margin:0; position:absolute; top:10px; right:8px}*/
+#vvergleich .ergebnisBox .position {display:block; margin-left:2px; margin-bottom:1px; text-align:left; font-weight:normal; font-size:9px; color:#333;}
+#vvergleich .ergebnisBox a.tarifinfo {font-weight:bold; text-decoration:underline!important }
+
+#vvergleich .ergebnisHeader.risikolv .cell.sp4 {width:130px}
+#vvergleich .ergebnisBox.risikolv .line .cell.sp1 .label {text-decoration:none; font-size:10px; }
+#vvergleich .ergebnisBox.risikolv .line .cell.sp1 img {cursor:default}
+#vvergleich .ergebnisBox.risikolv .cell.sp2{width:230px;}
+#vvergleich .ergebnisBox.risikolv .cell.sp5{width:100px;}
+#vvergleich .ergebnisBox.risikolv .cell.sp5.bruttobeitrag { margin-right:20px; }
+
+/* Sondereinstellung für Unfall-Rechner */
+#vvergleich .ergebnisBox .cell.sp2 .unf .setting_left {width:140px;}
+#vvergleich .ergebnisBox .cell.sp2 .unf .setting_right {width:95px;margin-left:145px; }
+
+#vvergleich .ergebnisBox.sterbegeld .cell.sp2 .setting_left {width:160px;}
+#vvergleich .ergebnisBox.sterbegeld .cell.sp2 .setting_right {width:95px;margin-left:165px; }
+
+/* Sondereinstellung für Reise-Rechner */
+#vvergleich .ergebnisBox.reise .cell.sp2 .setting {font-size:16px; padding-bottom:10px; padding-top:0 }
+#vvergleich .ergebnisBox.reise .cell.sp2 .setting .tarifart_plus { font-weight:bold; margin-left:50px; line-height:8px }
+#vvergleich .ergebnisBox.reise .cell.sp2 .setting .vers_art {margin-bottom:2px; padding-bottom:2px; border-bottom:1px dotted #ccc; margin-right:5px}
+#vvergleich .ergebnisBox.reise .cell.sp2, #vvergleich .ergebnisBox.reise .cell.sp2 .setting { width:270px }
+#vvergleich .ergebnisBox.reise .cell.sp5 { width:90px; }
+/* Sondereinstellung für Oeltank-Rechner */
+#vvergleich .ergebnisBox.oeltank .cell.sp4 { width:90px; }
+
+/* Sondereinstellungen für Gewerbers */
+#vvergleich .ergebnisBox.gewerbers .cell.sp2 { width:350px; }
+#vvergleich .ergebnisBox.gewerbers .cell.sp2 .setting { width:345px; }
+#vvergleich .ergebnisBox.gewerbers .cell.sp2 .setting_right { width:210px; }
+#vvergleich .ergebnisBox.gewerbers .cell.sp2 .setting_right .info { line-height: 13px }
+
+#vvergleich .ergebnisBox.ergebnisHeader .line .cell {margin:0; padding:6px 0; text-align:center; font-weight:bold; color:#fff }
+#vvergleich .ergebnisBox.ergebnisHeader .line .cell.sp1 { height: auto }
+#vvergleich .ergebnisBox.ergebnisHeader {
+  display: none !important;
+  background-color: #4a6985;
+  border:0; padding:0; margin:5px 0 10px 0; }
+*+html #vvergleich .ergebnisBox.ergebnisHeader { border:1px solid #4583E0 }
+#vvergleich .ergebnisBox.ergebnisHeader a { color:#fff; text-decoration:none }
+
+/* Sondereinstellung für Reise-Rechner */
+#vvergleich .ergebnisBox.ergebnisHeader.reise .sp2 { text-align:left; padding-left:10px; }
+#vvergleich .ergebnisBox.ergebnisHeader.reise .sp4 { text-align:left; width:90px; margin-left:0;}
+#vvergleich .ergebnisBox.ergebnisHeader.reise .sp5 { text-align:left; width:90px; margin-left:20px;}
+
+#vvergleich .cell.sp4 .buttons {font-size:10px;float:left;display:block;margin-top:5px;}
+#vvergleich .cell.sp4 .buttons span {background-color:#dddddd;border:1px solid #aeadad;padding:1px 2px;border-radius:2px;height:14px;line-height:14px;}
+#vvergleich .cell.sp4 .buttons .aktiv {background-color:#ABCAFB; box-shadow: rgba(0,0,0,0.6) 1px 1px;}
+#vvergleich .cell .balken {display:block;position:relative;height:45px;}
+#vvergleich .cell .balken span, #tarifinfo .cell .balken span {
+  background-color: #cccccc;
+  background: -moz-linear-gradient(top,  #cccccc 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9));
+  background: -webkit-linear-gradient(top,  #cccccc 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  background: -o-linear-gradient(top,  #cccccc 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  background: -ms-linear-gradient(top,  #cccccc 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  background: linear-gradient(top,  #cccccc 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#f5f7f9',GradientType=0 );
+
+  width:14px;margin:0 1px 0 0;padding:0;font-size:0;display:block;position:absolute;bottom:0;
+}
+#vvergleich .cell .balken .b1 { height:20px; left:0; }
+#vvergleich .cell .balken .b2 { height:25px; left:15px; }
+#vvergleich .cell .balken .b3 { height:30px; left:30px; }
+#vvergleich .cell .balken .b4 { height:35px; left:45px; }
+#vvergleich .cell .balken .b5 { height:40px; left:60px; }
+#vvergleich .cell .balken .b6 { height:45px; left:75px; }
+
+#vvergleich .cell.sp4 .leistungssterne span { height:19px; width:19px; display:block; float:left; cursor:pointer; background:url(https://res.makler-bund.de/h1/_images/star_small.png) no-repeat 0 0; margin:0; padding:0 }
+#vvergleich .cell.sp4 .leistungssterne span.aktiv { background-position:0 -38px!important; }
+#vvergleich .cell.sp4 .leistungssterne span.aktiv_halb { background-position:0 -57px!important; }
+#vvergleich .cell.sp4 .leistungssterne .leistungspunkte { clear:both; font-size:10px; padding-top:10px; text-align:center; width:95px; }
+#vvergleich .cell.sp4 .sterne_kriterien { border:2px solid #999; background-color:#fff; position:absolute; width:340px;z-index:9999; font-size:10px; padding:5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); border-radius: 5px; }
+#vvergleich .cell.sp4 .sterne_kriterien p.ue { margin:0 0 3px 0; font-weight:bold; font-size:13px; text-align:center }
+#vvergleich .cell.sp4 .sterne_kriterien dl.line { border-bottom:1px dotted #999;}
+#vvergleich .cell.sp4 .sterne_kriterien dl.spalten dt {clear:left; float:left; width:260px;padding:3px 0; font-weight:normal; white-space:normal}
+#vvergleich .cell.sp4 .sterne_kriterien dl.spalten dd {margin-left:270px;padding:3px 0; width: 75px;}
+
+#vvergleich .cell .balken .aktiv, #tarifinfo .cell .balken .aktiv {
+  background-color: #4a6985;
+  background: -moz-linear-gradient(top,  #4a6985 0%, #4a6985 50%, #4a6985 51%, #4a6985 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4a6985), color-stop(50%,#4a6985), color-stop(51%,#4a6985), color-stop(100%,#4a6985));
+  background: -webkit-linear-gradient(top,  #4a6985 0%,#4a6985 50%,#4a6985 51%,#4a6985 100%);
+  background: -o-linear-gradient(top,  #4a6985 0%,#4a6985 50%,#4a6985 51%,#4a6985 100%);
+  background: -ms-linear-gradient(top,  #4a6985 0%,#4a6985 50%,#4a6985 51%,#4a6985 100%);
+  background: linear-gradient(top,  #4a6985 0%,#4a6985 50%,#4a6985 51%,#4a6985 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a6985', endColorstr='#4a6985',GradientType=0 );
+}
+#vvergleich .ergebnisBox .balken { margin-top:2px }
+
+/* Ausblenden Bewertungsbalken Uebersicht + Vergleich*/
+.ergebnisBox .cell.sp4,
+div#optionMrmo, span.balken, span.punkte {
+  display: none !important;
+}
+
+.empfehlungen-dummy, .leistunginfo-dummy, .tarifinfo-dummy, .angebot-dummy { display:none }
+#content-leistunginfo .symbole { margin:5px 10px 15px 0;}
+#content-leistunginfo .buttons .buttonline {display:block;font-size:12px }
+#content-leistunginfo .buttons span { display:inline-block; margin:0 10px 5px 0;text-align:center; width:50px; font-size:10px; height:14px; line-height:14px;}
+#content-leistunginfo .cell.sp4 .balkenline { float:left; width:100px;}
+#content-leistunginfo .balkenline .balken,
+#content-leistunginfo .cell.sp4 .balkenline .punkte{width:54px; padding-bottom:10px;}
+#content-leistunginfo .text{margin-top:10px;}
+#content-leistunginfo .prozentwert{font-size:9px;}
+#content-leistunginfo .cell .balken span{width:8px;}
+#content-leistunginfo .cell .balken .b1{ height:10px; left:0; }
+#content-leistunginfo .cell .balken .b2{ height:14px; left:9px; }
+#content-leistunginfo .cell .balken .b3{ height:18px; left:18px; }
+#content-leistunginfo .cell .balken .b4{ height:22px; left:27px; }
+#content-leistunginfo .cell .balken .b5{ height:26px; left:36px; }
+#content-leistunginfo .cell .balken .b6{ height:30px; left:45px; }
+#content-leistunginfo .infotext{ display:none}
+
+#content-tarifinfo .symbole { float:left;margin:5px 10px 15px 0;}
+#content-tarifinfo .infotext {display:none}
+
+#legende_schaden_info,
+#legende_service_info,
+#infotext_wartezeit,
+#infotext_schaden,
+#infotext_empfehlung { display:none }
+
+#vvergleich input.empfehlung {	float:left; margin:5px 0 0 10px;}
+#vvergleich input.wissenswertes { float:left; margin:5px 0 0 0;}
+
+#vvergleich .cell.sp4 .punkte {margin-top:3px;display:block;text-align:center;width:90px;font-size:16px;color:#666;}
+#vvergleich .cell.sp4 .punkte .prozentwert {font-weight:bold;}
+#vvergleich .cell .betrag {font-weight:bold;font-size:18px;margin:0 0 0 0;display:block;}
+#vvergleich .ergebnisBox .cell a.antrag {
+  font-size: 12px;
+  background: #95ac29;
+  border-bottom-color: #95ac29;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 400;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 2px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#vvergleich .ergebnisBox .cell a.angebot {margin-top:10px;font-size:12px;display:block;}
+#vvergleich .vergleichbutton-box {width:100%;text-align:right;margin:0 0 0 0;padding:0;}
+#vvergleich .vergleichbutton-box.abstand {margin-top:25px;}
+
+#vvergleich .resultFilter {padding:0 10px 10px 10px;}
+#vvergleich .resultFilter_legend {font-weight:bold;padding:3px 0px 8px 0px;font-size:12px}
+#vvergleich .resultFilter_legend a { text-decoration:none; vertical-align:middle;}
+
+#vvergleich .resultFilter_legend a.unten, #vvergleich .resultFilter_legend a.oben { font-size: 20px; color: #4a6985;}
+
+#vvergleich .resultFilter_legend a.unten:before {font-family: FontAwesome; content: "\f139"; color: #4a6985; font-size: 20px; margin-right: 7px}
+#vvergleich .resultFilter_legend a.oben:before {font-family: FontAwesome; content: "\f13a"; color: #4a6985; font-size: 20px; margin-right: 7px}
+
+#vvergleich .resultFilter .zahlweise,
+#vvergleich .resultFilter .beitrag,
+#vvergleich .resultFilter .prozent,
+#vvergleich .resultFilter .sortierung,
+#vvergleich .resultFilter .sb,
+#vvergleich .resultFilter .lstg_gliedertaxe,
+#vvergleich .resultFilter .tarif_sort{ display:flex; flex-wrap:wrap; margin-top: 15px;}
+
+.prozent_info{margin-left: 20px !important;line-height: 18px; font-size: 14px; margin-bottom: 25px !important}
+#vvergleich .resultFilter .gefunden {color: #3b3b3a; font-weight:bold;font-size:14px; margin:15px 10px 10px -4px; text-align:center}
+#vvergleich .resultFilter .prozent_info { font-size:10px;margin:0 0 5px 0; }
+#vvergleich .resultFilter .leftside { flex-basis: 0; flex-grow: 1; max-width: 100%; flex: 0 0 35%;}
+#vvergleich .resultFilter .leftside .infoicon { margin-right:5px}
+
+#vvergleich .resultFilter .ZahlweiseSlider,
+#vvergleich .resultFilter .BeitragSlider,
+#vvergleich .resultFilter .PunkteSlider,
+#vvergleich .resultFilter .SortierungSlider,
+#vvergleich .resultFilter .SBSlider,
+#vvergleich .resultFilter .LstgGliedertaxeSlider,
+#vvergleich .resultFilter .selectsortierung { max-width: 100%; flex-basis: 0; flex-grow:1; }
+
+#vvergleich #chk_show_hidden_tarife { float: left; display:block; font-weight:normal;}
+#chk_show_hidden_tarife.hidden {display:block!important; visibility:hidden!important;}
+#chk_show_hidden_tarife label { color: #3b3b3a; display:inline; font-size:16px }
+
+#vvergleich .blaettern { text-align:center; margin:10px 0 5px 0 }
+#vvergleich .blaettern a { padding:3px 5px;margin:0 0 }
+#vvergleich .blaetter-seiten a.active { font-weight:bold; color:#cc0000 }
+#vvergleich a.ausgrauen {color:#999;}
+
+/*#vvergleich .ergebnisBox.hidden {display:none;}*/
+#vvergleich .ergebnisBox.ausgrauen * {color:#999!important;}
+#vvergleich .ergebnisBox.ausgrauen .balken span {opacity: 0.3!important;}
+#vvergleich .ergebnisBox.ausgrauen .cell.sp4 .buttons span {opacity: 0.3!important;}
+#vvergleich .ergebnisBox.ausgrauen img {opacity: 0.3!important;}
+#vvergleich .ergebnisBox.ausgrauen .infoicon { }
+#vvergleich .ergebnisBox.ausgrauen a.tarif_gesinfo div {opacity: 0.3!important;}
+#vvergleich .chkleistungsvgl { float:right;	margin:2px 0 0 0;}
+
+#vvergleich .BeitragSliderValue,
+#vvergleich .PunkteSliderValue,
+#vvergleich .ZahlweiseSliderValue,
+#vvergleich .SortierungSliderValue,
+#vvergleich .LstgGliedertaxeSliderValue,
+#vvergleich .SBSliderValue {background:none repeat scroll 0 0 transparent;border:medium none; white-space:nowrap; }
+
+/* Tooltip Tests */
+/* eingabe begin */
+#vvergleich a.tTip { font-weight:normal; border:0; margin-top:2px; text-decoration:none; display:block }
+#vvergleich .tTip {cursor:help; }
+#vvergleich .tTip img {border:0 }
+
+#tiptip_holder{display:none;position:absolute;top:0;left:0;z-index:99999}
+#tiptip_holder.tip_top{padding-bottom:5px}
+#tiptip_holder.tip_bottom{padding-top:5px}
+#tiptip_holder.tip_right{padding-left:5px}
+#tiptip_holder.tip_left{padding-right:5px}
+#tiptip_content{ text-align:left; font-size:16px;color:#333;padding:4px 8px;border:1px solid rgba(255,255,255,0.25);background-color:#f5f7fa;border-radius:2px;box-shadow:0 0 3px #555; font-family: Roboto,sans-serif;}
+#tiptip_content{ max-height:250px; overflow: auto }
+#tiptip_content ul { margin-left:0; padding-left:15px }
+#tiptip_arrow,#tiptip_arrow_inner{position:absolute;border-color:transparent;border-style:solid;border-width:6px;height:0;width:0}
+#tiptip_holder.tip_top #tiptip_arrow{border-top-color:#555;border-top-color:rgba(51,51,51,0.25);}
+#tiptip_holder.tip_bottom #tiptip_arrow{border-bottom-color:#555;border-bottom-color:rgba(51,51,51,0.25);}
+#tiptip_holder.tip_right #tiptip_arrow{border-right-color:#555;border-right-color:rgba(51,51,51,0.25);}
+#tiptip_holder.tip_left #tiptip_arrow{border-left-color:#555;border-left-color:rgba(51,51,51,0.25);}
+
+#tiptip_holder.tip_top #tiptip_arrow_inner{margin-top:-6px;margin-left:-5px;border-top-color:#f5f7fa;}
+#tiptip_holder.tip_bottom #tiptip_arrow_inner{margin-top:-5px;margin-left:-5px;border-bottom-color:#f5f7fa;}
+#tiptip_holder.tip_right #tiptip_arrow_inner{margin-top:-6px;margin-left:-5px;border-right-color:#f5f7fa;}
+#tiptip_holder.tip_left #tiptip_arrow_inner{margin-top:-6px;margin-left:-7px;border-left-color:#f5f7fa;}
+*+html #tiptip_content { border:1px solid #ccc; }
+/* eingabe end */
+
+#vvergleich .ui-state-default, #vvergleich .ui-widget-content .ui-state-default, #vvergleich .ui-widget-header .ui-state-default {   border: 1px solid #666; background: #4583E0; font-weight: bold; color: #2779aa; }
+#vvergleich .ui-state-default a, #vvergleich .ui-state-default a:link, #vvergleich .ui-state-default a:visited { color: #2779aa; text-decoration: none; }
+#vvergleich .ui-state-hover, #vvergleich .ui-widget-content .ui-state-hover, #vvergleich .ui-widget-header .ui-state-hover, #vvergleich .ui-state-focus, #vvergleich .ui-widget-content .ui-state-focus, #vvergleich .ui-widget-header .ui-state-focus { border: 1px solid #4a6985; background: #385069; font-weight: bold; color: #0070a3; }
+#vvergleich .ui-state-hover a, #vvergleich .ui-state-hover a:hover { color: #385069; text-decoration: none; }
+#vvergleich .ui-state-active, #vvergleich .ui-widget-content .ui-state-active, #vvergleich .ui-widget-header .ui-state-active { border: 1px solid #666; background: #4583E0; font-weight: bold; color: #ffffff; }
+#vvergleich .ui-state-active a, #vvergleich .ui-state-active a:link, #vvergleich .ui-state-active a:visited { color: #ffffff; text-decoration: none; }
+#vvergleich .ui-widget :active { outline: none; }
+
+#vvergleich .ui-widget { font-family: Roboto,sans-serif; font-size: 1.1em; }
+#vvergleich .ui-widget .ui-widget { font-size: 1em; }
+#vvergleich .ui-widget input,
+#vvergleich .ui-widget select,
+#vvergleich .ui-widget textarea,
+#vvergleich .ui-widget button { font-family: Roboto,sans-serif; font-size: 1em; }
+#vvergleich .ui-widget-content { border: 1px solid #96a4b2; background: #f5f7fa; color: #362b36; }
+#vvergleich .ui-widget-content a { color: #362b36; }
+#vvergleich .ui-widget-header {
+  border: 1px solid #aed0ea; color: #222222; font-weight: bold; }
+#vvergleich .ui-widget-header a { color: #222222; }
+
+#vvergleich .ui-slider { position: relative; text-align: left; cursor:pointer; }
+#vvergleich .ui-slider .ui-slider-handle {
+  /*background: #4583E0 url(https://res.makler-bund.de/h1/_images/slider.png) 50% 50% no-repeat;*/
+  background: #4a6985;
+  background-image: url(https://res.makler-bund.de/h1/_images/slider.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor:pointer; position: absolute; z-index: 3; width: 1.6em!important; height: 1.2em!important;
+}
+#vvergleich .ui-slider .tick { z-index: 2; border-left: 2px solid #4a6985; position: absolute; height: 100%; font-size: 1.8em; line-height: 1.8em; background: none; text-align: center; }
+
+#vvergleich .ui-slider-horizontal { height: .5em; margin:3px 0 3px 0; border-radius:2px; }
+#vvergleich .ui-slider-horizontal .ui-slider-handle { top: -.4em; margin-left: -.6em; border-radius:10px;-webkit-box-shadow:rgba(0,0,0,0.4) 1px 1px;box-shadow:rgba(0,0,0,0.4) 1px 1px; }
+#vvergleich .ui-slider-horizontal .ui-slider-handle:hover { background-color:#385069; }
+#vvergleich .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+#vvergleich .ui-slider-horizontal .ui-slider-range-min { left: 0; }
+#vvergleich .ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+#content-angebot dl.spalten dt {clear:left; float:left; width:120px;padding:3px; font-weight:bold}
+#content-angebot dl.spalten dd {margin-left:120px;padding:3px}
+#content-angebot dl.spalten .feld1 { width:300px; }
+#content-angebot dl.spalten .feld2 { width:65px;  }
+#content-angebot dl.spalten .feld3 { width:230px; }
+#content-angebot dl.spalten .text1 { width:300px; height:35px;  }
+#content-angebot dl.spalten dd.tarif,
+#content-angebot dl.spalten dd.gesellschaft { font-weight:bold}
+
+#content-angebot dl.spalten .feld1,
+#content-angebot dl.spalten .feld2,
+#content-angebot dl.spalten .feld3,
+#content-angebot dl.spalten .text1 {border:1px solid #999}
+
+#content-angebot dl.spalten .feld1.error,
+#content-angebot dl.spalten .feld2.error,
+#content-angebot dl.spalten .feld3.error,
+#content-angebot dl.spalten .text1.error {border:3px solid #cc0000}
+
+/* eingabe begin */
+#dialog-overlay {width:100%;height:100%;opacity: 0.8;background:#fff;position:fixed;top:0; left:0; z-index:3000; display:none;}
+#dialog-box {padding-top:5px; border-radius: 2px; border: 1px solid rgba(0,0,0,.2);background:#fff;width:550px;position:absolute;z-index:5000;display:none;}
+#dialog-box .dialog-content {text-align:left; padding:5px 0 0 5px; margin:13px;color:#3b3b3a; line-height:16px;font-size:13px; }
+#dialog-box .buttons {text-align:center;margin:10px auto 0 auto;}
+#dialog-box a.button_send {margin-right:10px;text-align:center;display:inline;padding: 3px 5px;color: #fff;text-decoration: none;font-weight: bold;line-height: 1;width:80px;background-color: #4583E0;border-radius: 5px;box-shadow: 0 1px 3px rgba(0,0,0,0.5);text-shadow: 0 -1px 1px rgba(0,0,0,0.25);border: 1px solid rgba(0,0,0,0.25);position: relative;cursor: pointer;}
+#dialog-box a.button { display:none; }
+#dialog-box a.button.ecke {position: absolute;right: 2px;top: 0;text-align: center;display: block;padding: 2px 5px;color: #000;text-decoration: none;font-weight: 700;line-height: 1;width: 15px;cursor: pointer;text-shadow: 0 1px 0 #fff;opacity: .5; text-transform: lowercase;}
+#dialog-box a.button:hover, #dialog-box a.button_send:hover {opacity: 1}
+#dialog-box a.button:active, #dialog-box a.button_send:active {background-color:#4583E0;}
+#dialog-message {max-height:400px;overflow:auto;}
+#dialog-box .dialog-content p {font-weight:normal;margin:0 0 10px 0;}
+#dialog-box .dialog-content ul {margin:10px 0 10px 0;padding:0; list-style:none;}
+#dialog-box .dialog-content ul li{margin-bottom:5px;}
+#dialog-box .bewertungslogo { float:right; margin-right:20px }
+#dialog-box p.kategorie { border-bottom:1px dotted #ccc; margin-bottom:5px; margin-right:20px; padding-bottom:5px }
+#dialog-box dl.kategorie_bereich { margin-bottom:6px }
+#dialog-box dd.beschreibung { clear:both; float:left; width:350px; margin:0 }
+#dialog-box dt.bewertung_sterne { width:100px; margin-right:20px; float:right; text-align:center }
+#dialog-box p.makler { font-weight:bold; border-bottom:1px dotted #ccc; margin-bottom:5px; margin-right:20px; padding-bottom:5px }
+#dialog-box p.makler_meinung { font-style:italic }
+/* eingabe end */
+
+table#tbl_GesellListe .row-header td ,
+table#tbl_vorgaben .row-header td,
+table#detailFragen .row-header td { font-size:12px; font-weight:bold; padding:10px 0 10px 0; border-bottom:1px solid #999 }
+
+#vvergleich .rot {color: #cc0000;}
+#vvergleich .table-berechnung{border-top:1px solid #ccc;border-left:1px solid #ccc;width:100%;}
+#vvergleich .table-berechnung tr td {border-bottom:1px solid #ccc;border-right:1px dotted #ddd;text-align:left;padding:2px 6px;}
+#vvergleich .table-berechnung td.sp1 {text-align:center;vertical-align:middle;}
+#vvergleich .table-berechnung td.sp1 a {text-decoration:none;padding:5px 0;display:block;}
+#vvergleich .table-berechnung td.sp1 a .label {text-decoration:underline;font-size:16px;}
+#vvergleich .table-berechnung td.sp5 {text-align:right;white-space:nowrap;}
+#vvergleich .table-berechnung td.sp6 {white-space:nowrap;font-weight:bold;font-size:14px;color:#cc0000;}
+#vvergleich .table-berechnung td.sp7 {white-space:nowrap;}
+#vvergleich .table-berechnung td.sp8 {text-align:right;white-space:nowrap;}
+#vvergleich .table-berechnung td.sp8 .chkleistungsvgl {margin:0;float:none;}
+#vvergleich .table-berechnung .row-header td {font-weight:bold;text-align:center;background-color: #4583E0;color:#fff;}
+#vvergleich .table-berechnung .row-header a {color:#fff;}
+#vvergleich .table-berechnung a.infoicon {text-decoration:none;}
+
+div.auxmtbasicemnxczelas, div.auxmtbasicemnxczelas span, div.auxmtbasicemnxczelas li { background-color: #fff!important; }
+div.auxmtbasicemnxczelas li { margin-left:0!important; font-family: inherit, sans-serif;  font-size:12px!important; color: #666!important; border-top-color: #ccc!important; }
+div.auxmtbasicemnxczelas li.ac_over { color:#fff!important; background-color: #999!important }
+
+/* eingabe begin */
+#DIV_Gliedertaxe { width: 100%; height: 440px; position: relative; margin: auto; border-top:1px solid #ccc }
+#DIV_Gliedertaxe input{ position: absolute; border: solid 0 #00F;border-bottom-width: 1px;color: #00F;bottom: -2px;text-align: right;width: 42px;font-size:12px; }
+#DIV_Gliedertaxe .gliedertaxe_bild { position: absolute; left: 0; top: 0; }
+#DIV_Gliedertaxe .info {line-height:14px; font-size:16px; margin-right:20px; position: absolute; left: 20px; top: 8px;}
+#DIV_Gliedertaxe .links { left: 20px; position: absolute; width: 220px;  }
+#DIV_Gliedertaxe .rechts { left: 390px; position: absolute;  width: 180px; }
+#DIV_Gliedertaxe .links input{right: 10px;}
+#DIV_Gliedertaxe .links .prefix{	right: 60px;	white-space: nowrap;}
+#DIV_Gliedertaxe .links .suffix{	right: 0;}
+#DIV_Gliedertaxe .rechts input{	left: 0;}
+#DIV_Gliedertaxe .rechts .prefix{	left: 56px;	white-space: nowrap;}
+#DIV_Gliedertaxe .rechts .suffix{	left: 45px;}
+#DIV_Gliedertaxe .suffix{	position: absolute;	bottom: 0; font-size:16px;}
+#DIV_Gliedertaxe .prefix{	position: absolute;	bottom: 0; text-align: right; font-size:16px;}
+/* eingabe end */
+
+/* für Antrag */
+#mrmoAntrag table, #tbl_antrag, #TBL_Beratungsdokumentation table { margin:0 auto;padding:0}
+#mrmoAntrag table td, #tbl_antrag td, #TBL_Beratungsdokumentation table td {padding:3px}
+#mrmoAntrag table input.Auftrag, #tbl_antrag input.Auftrag, #TBL_Beratungsdokumentation table input.Auftrag { font-size:14px; font-weight:bold; margin:10px 0}
+#mrmoAntrag table .antart, #tbl_antrag .antart, #TBL_Beratungsdokumentation table .antart { font-size:15px; font-weight:bold; color:#3b3b3a; }
+#mrmoAntrag table .antart span, #tbl_antrag .antart span, #TBL_Beratungsdokumentation table .antart span { padding-top:10px; display:inline-block;}
+#mrmoAntrag table .antart img, #tbl_antrag .antart img, #TBL_Beratungsdokumentation table .antart img {float:right;}
+#mrmoAntrag table .balken, #tbl_antrag .balken, #TBL_Beratungsdokumentation table .balken {background-color:#4583E0; height:8px}
+#mrmoAntrag table .antus, #tbl_antrag .antus, #TBL_Beratungsdokumentation table .antus {font-size:12px; font-weight:bold; color:#3b3b3a; background-color:#cccccc;}
+#mrmoAntrag table .antt, #tbl_antrag .antt, #TBL_Beratungsdokumentation table .antt {font-size:12px; font-weight:normal; background-color:#efefef;}
+#mrmoAntrag table .antk, #tbl_antrag .antk, #TBL_Beratungsdokumentation table .antk {font-size:9px; font-weight:normal; background-color:#efefef;}
+
+input[disabled], input:disabled {background-color: #E6E6E6 !important;color: #9D9D9D !important;}
+
+/* eingabe begin */
+#vvergleich p.zusatzfragen { font-size:16px; margin:15px 5px 10px 5px; line-height: 1.4em;}
+#vvergleich p.zusatzfragen label, #vvergleich p.zusatzfragen input { cursor:pointer; }
+#vvergleich p.zusatzfragen input { float:left; margin:0px 10px 5px 5px}
+/* eingabe end */
+
+#vvergleich .bewertung { width: 95px; height:19px; margin:8px auto 0 auto }
+#vvergleich .bewertung .star { float:left; cursor:pointer; background:url(https://res.makler-bund.de/h1/_images/star_small.png) no-repeat 0 0; height:19px; width:19px; margin:0; padding:0 }
+#vvergleich .bewertung .markiert_halb { background-position:0 -57px; }
+#vvergleich .bewertung .markiert { background-position:0 -38px; }
+/*#vvergleich .vertical { display:table-cell; vertical-align:middle; }*/
+
+/* kfz rechner begin */
+#vvergleich .row-3{background:#FFD682!important}
+#vvergleich .toggle_table{z-index:7;width:100%;margin-top:50px;position:absolute}
+#vvergleich .errorBox{padding:1px 5px;margin:3px 0;color:#900;background:#fdd;border:1px solid #f00}
+#vvergleich .subHeader{text-align:center;font-weight:bold;padding:5px;border-bottom:1px solid #2C74E0;border-top:1px solid #2C74E0;border-left:1px solid #ccf;border-right:1px solid #ccf}
+#vvergleich #vgl_layer{position:absolute;z-index:3;top:0;left:0;background-color:#555;opacity:0.5;filter:Alpha(opacity=50);}
+#vvergleich .topRound{-moz-border-radius-topleft:5px;-moz-border-radius-topright:20px}
+#vvergleich .schattiert{-moz-box-shadow:1px 4px 16px 3px #3b3b3a}
+#vvergleich .topMenuBox{white-space:nowrap; font:16px Arial,Helvetica,sans-serif; }
+#vvergleich .topMenuBox .MenuEntry{text-align:center;padding:2px 18px;margin-right:10px;cursor:default;display:inline-block;border-left:1px solid #ccf;border-top:1px solid #ccf;border-right:1px solid #ccf}
+#vvergleich .topMenuBox .MenuEntry.none{color:#666;background:#eee}
+#vvergleich .topMenuBox .MenuEntry.aktiv{color:#fff;background:#2C74E0}
+#vvergleich .topMenuBox .MenuEntry.done{color:#3b3b3a;background:#BBE86C}
+#vvergleich .topMenuBox .MenuEntry.done:hover{cursor:pointer; color:#fff;background:#2C74E0}
+#vvergleich .sp0{width:276px}
+#vvergleich .sp100{width:100px}
+#vvergleich .sp148{width:148px}
+#vvergleich .sp200{width:200px}
+#vvergleich .sp228{width:228px}
+#vvergleich input[readonly]{color:#666;background:#eee}
+/* kfz rechner eingabe end */
+
+#vvergleich table .row-header { font-weight: bold; text-align: center; background-color: #4583E0; }
+#vvergleich table .row-header td, #vvergleich table .row-header th { color: #fff!important; }
+
+#vvergleich .BubbleStyle{text-align:center; margin:0 auto; position:absolute; text-decoration:none!important; font-size:16px; font-family:Roboto,sans-serif; padding:3px 4px; color:#333!important; z-index:10000; display:none; height:15px; border:1px solid #ccc; border-radius:5px; background-color:#f5f7fa}
+
+/* PRINT */
+.printonly { display: none }
+@media print  { .printonly { display: block } #vvergleich .ergebnisBox, #vvergleich .ergebnisBox div, #vvergleich .ergebnisBox span { page-break-inside: avoid!important; }
+}
+
+/* Touch Style */
+#vvergleich.isTouchDevice .ui-slider-horizontal .ui-slider-handle { top:-.8em; }
+#vvergleich.isTouchDevice .ui-slider .ui-slider-handle { width: 2.5em!important; height: 1.7em!important; }
+
+/*
+Neues Tipp-System
+*/
+#vvergleich #ergebnisBox-out {
+  position: relative;
+}
+
+#vvergleich .ergebnisBox.preisTipp {
+  background: url(https://res.makler-bund.de/h1/_images/preisTipp.png);
+  background-position: 101% 102%;
+  background-repeat: no-repeat;
+}
+
+#vvergleich .ergebnisBox.preisTipp .cell.sp6,
+#vvergleich .ergebnisBox.leistungTipp .cell.sp6,
+#vvergleich .ergebnisBox.preisleistungTipp .cell.sp6
+{
+  top:0
+}
+
+#vvergleich .ergebnisBox.preisTipp .tipp_header a.infoiconAutoTipp,
+#vvergleich .ergebnisBox.leistungTipp .tipp_header a.infoiconAutoTipp,
+#vvergleich .ergebnisBox.preisleistungTipp .tipp_header a.infoiconAutoTipp
+{
+  background: none;
+  text-decoration:none;
+  color: #385069;
+  cursor: default;
+  font-size: 16px;
+}
+
+#vvergleich .ergebnisBox.preisTipp .tipp_header,
+#vvergleich .ergebnisBox.leistungTipp .tipp_header,
+#vvergleich .ergebnisBox.preisleistungTipp .tipp_header
+{
+  background: #afca2b;
+  font-weight:bold;letter-spacing:2px;font-size:14px;padding:10px 3px 5px 5px; text-align:center;
+}
+
+#vvergleich .ergebnisBox.tipp.preisTipp,
+#vvergleich .ergebnisBox.tipp.leistungTipp,
+#vvergleich .ergebnisBox.tipp.preisleistungTipp
+{
+  margin-bottom: 10px;
+  border: 1px solid #c5c5c5;
+  background-color: #f5f7fa ! important;
+}
+
+#vvergleich .ergebnisBox.preisTipp .line .tippNichtGefunden ,
+#vvergleich .ergebnisBox.leistungTipp .line .tippNichtGefunden,
+#vvergleich .ergebnisBox.preisleistungTipp .line .tippNichtGefunden
+{
+  color: #385069;
+  font-weight: bold;
+  padding-top: 27px;
+  margin-left: 142px;
+  margin-right: 91px;
+}
+
+#vvergleich .ergebnisBox.preisTipp .position,
+#vvergleich .ergebnisBox.leistungTipp .position,
+#vvergleich .ergebnisBox.preisleistungTipp .position
+{
+  display:none;
+}
+
+#vvergleich .ergebnisBox .position
+{
+  display: block;
+  visibility: hidden;
+}
+#vvergleich .sortInfo
+{
+  margin-bottom: 5px;
+  font-weight: bold;
+  /*text-align: center*/
+}
+
+#vvergleich #box_gesell,
+#vvergleich #box_faq,
+#vvergleich #box_erstinfo
+{
+  margin-left: 20px;
+  padding: 15px;
+}
+
+#box_erstinfo p {
+  line-height: 1.2em;
+}
+span.erstInfoChkBox {
+  margin-left: 20px;
+}
+div#mrmoErstinfoError {
+  background-color: transparent !important;
+  border: none !important;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+p.pfaqlink {
+  margin-left: 20px;
+}
+#vvergleich {
+  -webkit-animation: fadein 1.3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.3s; /* Firefox < 16 */
+  -ms-animation: fadein 1.3s; /* Internet Explorer */
+  -o-animation: fadein 1.3s; /* Opera < 12.1 */
+  animation: fadein 1.3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Auswahl Antrag */
+form ~ center > br {
+  line-height: 2em;
+}
+
+/* Antrag absenden */
+.head {
+  margin-bottom: 5px !important;
+}
+
+#steps .step1, #steps .step3 {
+  border-radius: unset !important;
+}
+
+#tarifinfo {
+  flex-wrap: wrap !important;
+  display: flex !important;
+  justify-content:space-evenly;
+}
+
+div#tarifinfo > div {
+  padding:5px 15px;
+}
+
+#tarifinfo .sp1 {width: unset;margin-right: 0;display: unset;text-align: center;float: unset;}
+#tarifinfo .sp1 span {display: block}
+#tarifname {font-size: 12px; line-height: 5px;color: #3b3b3a;}
+span.head_logo_style{margin-bottom: 0px}
+span.head_logo_style ~ br {display: none}
+#tarifinfo .sp2 dl {font-size: 12px; color: #3b3b3a;}
+.jahresbeitrag {font-size: 16px;color: #3b3b3a;}
+
+#tarifinfo .sp2{width:unset;float:unset}
+#tarifinfo .sp3 {width: unset; padding-top: unset;float:unset;}
+#tarifinfo .sp4 {float: unset;}
+@media (max-width: 768px) {
+  #tarifinfo .sp2 dd {margin-left:120px;}
+  #tarifinfo .sp4 {position: unset;}
+  #tarifinfo {justify-content:center;}
+}
+
+* {font-family: 'Roboto', sans-serif !important;}
+a {color: #95ac29;}
+a:hover{color: #afca2b;}
+a#antragslink {background-color: #95ac29;color: #fff;text-decoration: none;border: 1px solid transparent;padding: .375rem .75rem;border-radius: 2px;transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+a#antragslink:hover {background-color:#afca2b;}
+#bereich_modellwahl{margin-top: 0;}
+div#zeile_modellwahl_hinweis_antrag, div#zeile_modellwahl_hinweis_invitatio {display: none !important;}
+div#zeile_modellwahl_optionen{border: none;}
+div#zeile_modellwahl_optionen .sp1{height: 45px;overflow: hidden;margin-top: -10px}
+div#bereich_modellwahl .ant_box{margin-top: 10px;}
+div#antrag{width:100% !important;font-family: 'Roboto', sans-serif !important;min-height:250px;background-color: #ffffff;}
+.head{margin: 0; height: 35px; background: #4a6985;}
+input#btn_back {width: 100%; height: 45px; margin-top: 10px;margin-bottom: 10px;font-size: 18px !important;box-shadow: 0 1px 3px rgba(0,0,0,0.5);}
+.head_logo {display: none !important;}
+.head_ue{font-size: 20px; font-weight:normal;color:#fff;display:block;position:unset;line-height:unset !important;text-align:center;padding-top:8px}
+.head_ue .head_sparte{display:inline-block;font-size:20px}
+span.head_sparte:before{content: "\00a0 "}
+.ant_box{border:none; background-color:#fff;box-shadow:none;padding: 0 10px;}
+.ant_box > div{border-bottom: 1px dotted #ddd;line-height: unset;}
+div.zeile .sp1{font-size:16px;font-weight:normal;color:#666}
+div.zeile .sp2{font-size:16px;font-weight:normal;color:#666}
+/*div.zeile .sp1:hover, div.zeile .sp2:hover, div.zeile .sp1:active, div.zeile .sp2:active{font-size:16px !important;font-weight:normal !important;color:#666 !important;}
+.ant_box > div:hover, .ant_box > div:active {font-size:16px !important;font-weight:normal !important;;color:#666 !important;background: #f3f3f3 !important;}*/
+div.zeile:hover .sp1{color:#666 !important;}
+input[type=text], textarea, select{height:40px; font-size: 16px; color:#495057;border:1px solid #ced4da;background: #fff;padding: .4rem .75rem;border-radius:2px;line-height:1.5;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out}
+.ant_ue, .ant_ue_sepa,
+#zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben, #zeile_ges_fragen0,
+#zeile_zw_daten_pferd1, #zeile_zw_daten_pferd2, #zeile_zw_daten_pferd3, #zeile_zw_daten_pferd4,
+#zeile_zw_versicherte_personen1, #zeile_zw_versicherte_personen2, #zeile_zw_versicherte_personen3, #zeile_zw_versicherte_personen4, #zeile_zw_versicherte_personen5
+{background-color:#f5f7fa;color:#4a6985;font-size: 18px;font-weight:normal;text-align: left;height: 20px; padding:6px 10px;border: none;box-shadow:none}
+#zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben,
+#zeile_zw_daten_pferd1, #zeile_zw_daten_pferd2, #zeile_zw_daten_pferd3, #zeile_zw_daten_pferd4 {line-height: .7}
+#zeile_zw_dok_kundenangaben > .sp_colspan {color: #4a6985;padding: unset;}
+div#zeile_hinweis_allgemein {padding-left: 20px;color: #dc3545;font-size: 12px;}
+#zeile_ges_fragen0 > .sp_colspan > div {line-height: .4;font-weight: normal !important;font-size: 18px !important;}
+div#zeile_ges_fragen0 {margin:0 !important}
+div[id^=zeile_ges_fragen]{border-top:none}
+div[id^=zeile_person_betraege]{padding-left:20px}
+div[id^=zeile_zw_versicherte_personen]{line-height:.5}
+.unf_person_box > .ueb_box {color: #4a6985;font-size: 12px;}
+.unf_person_box > .ueb_box > div > br {content: " "}
+.unf_person_box > .cont_box {font-size: 12px;padding-left: 3px;}
+#aDialog{background-color:#fff;border: 1px solid rgba(0,0,0,.2);box-shadow:none;}
+#aDialog #aDialogClose{color:#000; text-transform:lowercase;opacity: .5;top:10px}
+#aDialog #aDialogBody{color:#dc3545;}
+input.hasDatepicker, #Seit_wann_Eigentuemer, .gebdatum_tier, #es_v_ablauf, #Geburtsdatum_Lebenspartner, #Datum_dok, #Versicherungsbeginn, #Geb_datum, #sepa_gebdatum, #Geb_datum_Partner, #Beginn_Vorversicherung, #Ablauf_Vorversicherung, #Geb_datum_Partner{width:75% !important}
+#Anrede{width:42% !important}
+#Titel {width:40% !important; margin-left: 4px}
+.ant_box input[type=text], .ant_box select {width: 86%;}
+.ant_box > div#zeile_telefon{display:none}
+.ant_box > div#zeile_beruf{display:none}
+#Anrede_Lebenspartner, #Zahlungsart{width:86% !important}
+#Vorname_Lebenspartner, #Nachname_Lebenspartner {width: 42%!important;margin-left: 2px;}
+input.plz, #PLZ, #Risiko_PLZ, .objekt_plz {width: 30% !important;margin-right: 3px;}
+input.ort, #ort, #Risiko_Ort, .objekt_ort {width: 52%!important;margin-left: 4px;}
+input.strasse {width: 60%!important;margin-right: 3px;}
+input.hausnr {width: 24% !important;margin-left: 4px;}
+
+img.ui-datepicker-trigger{height:25px;opacity:0.7;margin-top:5px}
+.smallinfo{font-size: 12px !important;color:#17a2b8;}
+.sepa_mandat, .sepa_kontoinhaber{border: none !important;}
+div#zeile_sepa_mandat11{font-size: 12px}
+#zeile_sepa_mandat11 .sp_colspan br:first-of-type{content: " "}
+#zeile_nettobeitrag, #zeile_hinweis_intern{border-top:none;margin-top:0;padding-top: 0;}
+.bruttobeitrag, #BeitragNachZahlweise{color: #dc3545}
+#zeile_hinweis_sonstige{font-size: 14px;padding-left:15px;}
+div#zeile_bestaetigung_abschluss, div#zeile_bestaetigung_datenschutz, div#zeile_bestaetigung_elementarbogen, div#zeile_bestaetigung_gebaeudealter_bogen, div#zeile_bestaetigung_datenschutz, div#zeile_bestaetigung_scoring, div#zeile_bestaetigung_dmbRS1, div#zeile_bestaetigung_dmbRS2, div#zeile_bestaetigung_dmbRS3, div#zeile_bestaetigung_opt1, div#zeile_bestaetigung_bonitaet, div#zeile_bestaetigung_antragssteller_verzicht, div#zeile_einwilligung_t1, div#zeile_einwilligung_t2, div#zeile_uwg_outro, div#zeile_bestaetigung_Maklerauftrag, div#zeile_cacheEingaben, div#zeile_bestaetigung_newsletter {padding-left: 15px;}
+span.arrow{display: none !important;}
+div#zeile_bestaetigung_abschluss .sp1, div#zeile_bestaetigung_datenschutz .sp1, div#zeile_bestaetigung_elementarbogen .sp1, div#zeile_bestaetigung_gebaeudealter_bogen .sp1, div#zeile_bestaetigung_datenschutz .sp1, div#zeile_bestaetigung_scoring .sp1, div#zeile_bestaetigung_dmbRS1 .sp1, div#zeile_bestaetigung_dmbRS2 .sp1, div#zeile_bestaetigung_dmbRS3 .sp1, div#zeile_bestaetigung_opt1 .sp1, div#zeile_bestaetigung_bonitaet .sp1, div#zeile_bestaetigung_antragssteller_verzicht .sp1, div#zeile_einwilligung_t1 .sp1, div#zeile_einwilligung_t2 .sp1, div#zeile_bestaetigung_Maklerauftrag .sp1, div#zeile_cacheEingaben .sp1, div#zeile_bestaetigung_newsletter .sp1{width:30px}
+div#zeile_bestaetigung_abschluss .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_elementarbogen .sp2, div#zeile_bestaetigung_gebaeudealter_bogen .sp2, div#zeile_bestaetigung_datenschutz .sp2, div#zeile_bestaetigung_scoring .sp2, div#zeile_bestaetigung_dmbRS1 .sp2, div#zeile_bestaetigung_dmbRS2 .sp2, div#zeile_bestaetigung_dmbRS3 .sp2, div#zeile_bestaetigung_opt1 .sp2, div#zeile_bestaetigung_bonitaet .sp2, div#zeile_bestaetigung_antragssteller_verzicht .sp2, div#zeile_einwilligung_t1 .sp2, div#zeile_einwilligung_t2 .sp2, div#zeile_bestaetigung_Maklerauftrag .sp2, div#zeile_cacheEingaben .sp2, div#zeile_bestaetigung_newsletter .sp2{margin-left: 20px}
+div.zeile.kaufen_bereich{background-color:#fff;border:none;border-radius:unset;}
+.kaufen_info_beitrag{font-size:22px;font-weight: normal;color:#dc3545}
+.antrag_auftrag{background: none !important;; background-color: #95ac29 !important;}
+#zeile_antrag_absenden{padding-left: 10px; padding-right: 10px;}
+.kaufen_info_ablauf, .maklereingeloggt{display: none !important;}
+.pb_button{height: 35px; background:#95ac29 !important;padding:.375rem .75rem;border-radius:2px;font-weight:normal;color: #fff;box-shadow:none;text-shadow: none;border: 1px solid transparent;}
+.pb_button:hover{background: #afca2b;}
+#kaufen_button{width: 100%; font-size: 20px; height: 50px;}
+input#cancelEmailTo{width:200px !important;}
+#antragAbbrechen .abs2{font-size: 16px;}
+div#sepa_zustimmungErrorBox, div#datenschutzErrorBox, div#abschlussErrorBox {background-color: #f44336 !important;border: transparent !important;color: #fff !important;padding: 15px !important;font-weight: normal !important;font-size: 14px !important;border-radius: 2px;}
+.FormErrorBox {background-color: unset !important;border: none !important;color: #dc3545!important;font-weight: normal !important;font-size: 14px !important;padding-left: 0px !important;}
+.zeile.beratungsdok {color: #4a6985;}
+.zeile.beratungsdok .sp_colspan{color: #666; padding-left: 20px;}
+.zeile.beratungsdok .sp_colspan p > br:nth-child(odd){content: " "}
+.zeile.beratungsdok .sp_colspan > p > strong {font-weight: 700;font-size: 14px;}
+div#zeile_tarife_empfohlen_dok .sp_colspan > textarea{width: 75% !important; margin-left:200px;}
+.boxHover{background: #f5f7fa;}
+div#txtBoxBausteine{left:15px !important;}
+.maklereingeloggt ~ span, .maklereingeloggt ~ label, div#antragAbbrechen, div#zeile_antrag_drucken, div#zeile_antrag_datum {display: none !important;}
+.maklereingeloggt ~ br {content: " "}
+div#zeile_kunde_bemerkung {display: none !important;}
+div#zeile_vertragdokumente_einsehen {display: none !important;}
+div#zeile_fax {display: none !important;}
+
+.vermittlerinfo_small{
+  display: none !important;
+}
+.dsRight{visibility:hidden !important;height:0;}
+
+div#bereich_hinweise{display: none !important;}
+
+@media (max-width: 768px) {
+  div#bereich_modellwahl {padding: 10px}
+  #zeile_modellwahl_optionen a#antragslink {width: 100%; text-align: center;}
+  div#bereich_hinweise, div#zeile_tarife_empfohlen_dok .sp_colspan > textarea{display: none !important;}
+  button#kaufen_button {height: 80px}
+}
+
+/*animation*/
+div#antrag {
+  -webkit-animation: fadein 1.3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1.3s; /* Firefox < 16 */
+  -ms-animation: fadein 1.3s; /* Internet Explorer */
+  -o-animation: fadein 1.3s; /* Opera < 12.1 */
+  animation: fadein 1.3s;
+}
+
+.pb_button{
+  background: #95ac29 !important;
+  border-radius: 2px !important;
+  transition: all .3s linear;
+}
+
+.pb_button:hover{
+  background: #afca2b !important;
+}
+
+/* Pflichtfelder */
+#zeile_Versicherungsbeginn .sp1:after,
+#zeile_vorname .sp1:after,
+#zeile_nachname .sp1:after,
+#zeile_plz_ort .sp1:after,
+#zeile_strasse .sp1:after,
+#zeile_telefon .sp1:after,
+#zeile_email_kunde .sp1:after,
+#zeile_beruf .sp1:after,
+#zeile_geb_datum .sp1:after,
+#zeile_gebdatum_lebenspartner .sp1:after,
+#zeile_sepa_mandat3 .sp1:after,
+#zeile_sepa_mandat4 .sp1:after,
+#zeile_sepa_mandat5 .sp1:after,
+#tr_plz .cell.sp1:after,
+#tr_vorvers5 .cell.sp1:after,
+#tr_schaeden5 .cell.sp1:after,
+#tbl_tr_Rasse_Tier1 .cell.sp1:after,
+#tbl_tr_vorvers5 .cell.sp1:after,
+#tbl_tr_schaeden5 .cell.sp1:after,
+#tr_gebdatum1 .cell.sp1:after,
+#tr_beruf_master1 .cell.sp1:after,
+#tr_alter .cell.sp1:after,
+#tr_wohnfl .cell.sp1:after
+{content: "*";color: #dc3545;position: relative;top: -5px;}
+
+@media (max-width: 768px) {
+  .eingabeBox > .line.header_line:after{font-size: 16px;}
+  input#btn_berechnen, input.form-button.btn-berechnen {width: 93%;}
+  #dialog-box{width:99% !important; left: 0px !important;}
+  #vvergleich .eingabeBox.haftpflicht .cell.sp1, #vvergleich .eingabeBox.haftpflicht .cell.sp2,
+  #detailFragen .cell.sp1, #detailFragen .cell.sp2, #vvergleich .eingabeBox .cell.sp1, #vvergleich .eingabeBox .cell.sp2
+  {width:84% !important; text-align: left !important;}
+
+  #vvergleich .eingabeBox .cell.sp3 {float: right;}
+  #vvergleich .eingabeBox .cell.sp1 {margin-left: 13px;}
+
+  #vvergleich .eingabeBox .line{border-bottom: none; }
+
+  #vvergleich .resultFilter .zahlweise, #vvergleich .resultFilter .beitrag, #vvergleich .resultFilter .prozent, #vvergleich .resultFilter .sortierung, #vvergleich .resultFilter .sb, #vvergleich .resultFilter .lstg_gliedertaxe, #vvergleich .resultFilter .tarif_sort{
+    display: inherit;
+  }
+
+  #vvergleich .resultFilter .leftside{margin-top: 20px; margin-bottom: 15px}
+
+  #vvergleich .vergleichbutton-box, .ergebnisBox .cell.sp6 {display: none}
+
+  #vvergleich .ergebnisBox .cell.sp1 {margin: 0 auto 15px;}
+  #vvergleich .ergebnisBox .cell.sp2 {margin: 0 auto 20px; width:100%}
+
+  #vvergleich #chk_show_hidden_tarife{margin: 10px 0px}
+
+  .head_ue, .head_ue .head_sparte{font-size: 16px}
+  .ant_ue, .ant_ue_sepa, #zeile_zw_daten_hund1, #zeile_zw_daten_hund2, #zeile_zw_daten_hund3, #zeile_zw_daten_hund4, #zeile_zw_dok_kundenangaben, #zeile_ges_fragen0, #zeile_zw_daten_pferd1, #zeile_zw_daten_pferd2, #zeile_zw_daten_pferd3, #zeile_zw_daten_pferd4, #zeile_zw_versicherte_personen1, #zeile_zw_versicherte_personen2, #zeile_zw_versicherte_personen3, #zeile_zw_versicherte_personen4, #zeile_zw_versicherte_personen5{font-size: 16px}
+
+  input[type="text"], select {
+    height: 45px !important;
+    padding: .4rem !important;
+  }
+
+  img.ui-datepicker-trigger {
+    height: 35px;
+  }
+
+  .line.perstabs {
+    margin-top: 5px !important;
+  }
+  div[id^="person_ue"] .cell.sp1_6.header {
+    font-size: 14px !important;
+    text-align: left !important;
+  }
+  div[id^="pers_tab"] {
+    color: transparent !important;
+  }
+  div[id^="pers_tab"]:before {
+    color: #FFF;
+    font-size: 20px !important;
+  }
+  div#pers_tab1:before {
+    content: "P1";
+  }
+  div#pers_tab2:before {
+    content: "P2";
+  }
+  div#pers_tab3:before {
+    content: "P3";
+  }
+  div#pers_tab4:before {
+    content: "P4";
+  }
+  div#pers_tab5:before {
+    content: "P5";
+  }
+  div#pers_tab6:before {
+    content: "P6";
+  }
+  div#pers_tab7:before {
+    content: "P7";
+  }
+  div#pers_tab8:before {
+    content: "P8";
+  }
+}
